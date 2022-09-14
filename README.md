@@ -1,5 +1,7 @@
-# WriteRight
-WriteRight is a one-stop shop for creative writers at any stage of the writing process. Through the app, writers get access to interactive planning pages, a grammar checker, and stylistic writing tips so they can write beautiful stories that they are proud of.
+
+# Project Title
+
+A brief description of what this project does and who it's for
 
 # MVP:
 - Login Pages
@@ -106,7 +108,7 @@ WriteRight is a one-stop shop for creative writers at any stage of the writing p
         - Folders in the My Worksheets tab 
     - Create Infrastructure for 
         - The three planning worksheets **(Week 5)**
-        - Creating folders in the My Worksheets tab **(Week 6) **
+        - Creating folders in the My Worksheets tab **(Week 6)**
         - Storing and saving worksheets into folders **(Week 6-7)**
         - Integrate grammar checker API **(Week 6)**
     - Combining front and back end at each stage
