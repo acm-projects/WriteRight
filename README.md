@@ -95,7 +95,7 @@ WriteRight is a one-stop shop for creative writers at any stage of the writing p
     - Presentation **(Week 8-10)**
 - Front End:
     - Use Figma or Adobe XD to create mockups for the app **(Week 2)**
-    - Learn Flutter Basics **(Week 2-3)**
+    - Learn React Basics **(Week 2-3)**
     - Code UI/UX based on mockups
     - Login and Sign Up Screens **(Week 4)**
     - Homepage: My Worksheets (refer to MVP) **(Week 4) **
