@@ -57,14 +57,17 @@ WriteRight is a one-stop shop for creative writers at any stage of the writing p
     - [Javascript Udemy Tutorial](https://www.udemy.com/course/javascript-essentials/)
 #
 
-- Firebase or Firestore (Database)
-    - Both have the ability to integrate well with Flutter 
-    - Firestore is made for mobile app development by Firebase 
-    - [Differences between Firebase and Firestore](https://firebase.google.com/docs/database/rtdb-vs-firestore)
-    - [https://firebase.google.com/docs](https://firebase.google.com/docs)
-    - [https://firebase.google.com/docs/firestore](https://firebase.google.com/docs/firestore)
-    - [Firebase Youtube Tutorial](https://www.youtube.com/watch?v=9kRgVxULbag)
-    - [Firestore Youtube Tutorial ](https://www.youtube.com/watch?v=4d-gIPGzmK4&list=PL4cUxeGkcC9itfjle0ji1xOZ2cjRGY_WB)
+- MongoDB (Database)
+  * Backend: 
+  * [MongoDB](https://www.mongodb.com/)
+    * Database which is used to store data such as age, income, annual spending, etc.
+  * [Mongoose](https://www.npmjs.com/package/mongoose)
+    * Allows you to define different types of objects for use with API Calls in relation to MongoDB
+    * [Introduction to Mongoose](https://code.tutsplus.com/articles/an-introduction-to-mongoose-for-mongodb-and-nodejs--cms-29527)
+  * [Express.js Installation](https://expressjs.com/en/starter/installing.html) (first install Node.js)
+    * Used for API Calls
+    * [Express tutorial with MongoDB](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs)
+  * Building a REST API with MongoDB, Express, and Node.js [Tutorial](https://youtu.be/fgTGADljAeg) 
 #
 - APIs
     - LanguageTool: Writing style and grammar checker (https://pub.dev/packages/language_tool)
@@ -101,7 +104,7 @@ WriteRight is a one-stop shop for creative writers at any stage of the writing p
     - Help Tab: organize links according to their purpose/which stage of writing they concern **(Week 6)**
     - Integrating front and back end at each step
 - Back End:
-    - Learn Basics for Firebase and chosen API **(Weeks 1-3)**
+    - Learn Basics for MongoDB and chosen API **(Weeks 1-3)**
     - Set up database to hold  
         - User profile information **(Week 3)**
         - Info from forms for Character Questionnaire, Worldbuilding, and 8-Point Arc (3 total planning worksheets) **(Weeks 5-7)**
