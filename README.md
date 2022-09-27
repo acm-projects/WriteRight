@@ -98,7 +98,7 @@ WriteRight is a one-stop shop for creative writers at any stage of the writing p
     - Learn React Basics **(Week 2-3)**
     - Code UI/UX based on mockups
     - Login and Sign Up Screens **(Week 4)**
-    - Homepage: My Worksheets (refer to MVP) **(Week 4) **
+    - Homepage: My Worksheets (refer to MVP) **(Week 4)**
     - Planning Tab: Main Page, 8-Point Arc, Worldbuilding, and Character Questionnaire  interactive worksheets **(Week 5)**
     - Workshop Tab: text field to paste writing, display suggestions to user below text field **(Week 5)**
     - Help Tab: organize links according to their purpose/which stage of writing they concern **(Week 6)**
