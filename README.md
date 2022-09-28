@@ -49,6 +49,9 @@ WriteRight is a one-stop shop for creative writers at any stage of the writing p
     - [Free Flutter Basics Udemy Course: ](https://www.udemy.com/share/1067vU3@VbyKb3tryUAlCk3vjVnCObMZ8FZB7HAqHDVns-LbeWSqS1CWLEyvzVRz-4gDl_XvaA==/)
     - [Widget Catalog](https://docs.flutter.dev/development/ui/widgets) and [Flutter Layout Cheat Sheet](https://medium.com/flutter-community/flutter-layout-cheat-sheet-5363348d037e)
     - [https://reactnative.dev/docs/environment-setup](https://reactnative.dev/docs/environment-setup)
+    - [React basics tutorial](https://www.youtube.com/watch?v=b9eMGE7QtTk)
+    - [React Components Cheat Sheet](https://yonedesign.medium.com/react-b5a619dc6532)
+    - [https://reactjs.org/docs/hello-world.html](https://reactjs.org/docs/hello-world.html)
 #
 - Dart or Javascript (Backend)
     - [https://dart.dev/tutorials](https://dart.dev/tutorials)
