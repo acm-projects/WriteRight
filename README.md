@@ -87,6 +87,7 @@ WriteRight is a one-stop shop for creative writers at any stage of the writing p
 
 - [Google Sign-In & Firebase Authentication Using Flutter](https://blog.codemagic.io/firebase-authentication-google-sign-in-using-flutter/)
 - [Super Simple Authentication Flow with Flutter & Firebase](https://codewithandrea.com/articles/simple-authentication-flow-with-flutter/)
+- [User Auth with MongoDB](https://youtu.be/SY_9zwb29LA)
 
 # Timeline
 
