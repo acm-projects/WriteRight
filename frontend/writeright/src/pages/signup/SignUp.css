@@ -1,7 +1,7 @@
 .outer {
   display: flex;
   flex-direction: column;
-  background-color: lavender;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -9,6 +9,7 @@
   justify-content: center;
 }
 .center-box {
+  margin-top: 25px;
   display: flex;
   display: flex;
   flex-direction: column;
