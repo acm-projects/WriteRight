@@ -1,12 +1,13 @@
 import React from 'react';
+import "../../everything.css";
 //SubmitButton.js
 
 class SubmitButton extends React.Component {
   render(){
     return (
-      <div className="submitButton">
+      <div>
         <button
-            className='btn'
+            className="submit-btnLI"
             disabled={this.props.disabled}
             onClick={() => this.props.onClick()}
         >

@@ -1,6 +1,6 @@
 //Import CSS sheet from same folder
-import "./SignUp.css";
-import logo from "../../images/logo.png";
+import "../../everything.css";
+import logo from '../../images/writerightTitle.png';
 import { useState } from "react";
 import axios from "axios";
 
@@ -49,75 +49,75 @@ function SignUp() {
 
   return (
     <div className="outer">
-      <div className="center-box">
+      <div className="center-boxSU">
         {/*Replace form background with the one from figma*/}
         {/*Replace title with actual Logo when imported */}
-        <img src={logo} className="logo" alt="Logo" />
-        <div className="form">
+        <img src={logo} className="logoSU" alt="Logo" />
+        <div>
           <form onSubmit={handleSubmit}>
-            <div className="form-group">
+            <div className="form-groupSU">
               <input
                 required
                 type="text"
-                className="form-field"
+                className="form-fieldSU"
                 name="fName"
                 id="fName"
                 value={fName}
-                placeholder="First Name"
+                placeholder="  first name"
               />
             </div>
 
-            <div className="form-group">
+            <div className="form-groupSU">
               <input
                 required
                 type="text"
-                className="form-field"
+                className="form-fieldSU"
                 name="lName"
                 id="lName"
                 value={lName}
-                placeholder="Last Name"
+                placeholder="  last name"
               />
             </div>
 
-            <div className="form-group">
+            <div className="form-groupSU">
               <input
                 required
                 type="email"
-                className="form-field"
+                className="form-fieldSU"
                 name="email"
                 id="email"
                 value={email}
-                placeholder="Email"
+                placeholder="  email"
               />
             </div>
 
-            <div className="form-group">
+            <div className="form-groupSU">
               <input
                 required
                 type="text"
-                className="form-field"
+                className="form-fieldSU"
                 name="username"
                 id="username"
                 value={username}
-                placeholder="Username"
+                placeholder="  username"
               />
             </div>
 
-            <div className="form-group">
+            <div className="form-groupSU">
               <input
                 required
                 type="password"
-                className="form-field"
+                className="form-fieldSU"
                 name="password"
                 id="password"
                 value={password}
-                placeholder="Password"
+                placeholder="  password"
               />
             </div>
 
-            <div className="form-group">
-              <button type="submit" className="submit-btn">
-                Submit
+            <div className="form-groupSU">
+              <button type="submit" className="submit-btnSU">
+                sign up
               </button>
             </div>
           </form>
@@ -125,12 +125,12 @@ function SignUp() {
       </div>
 
       <div className="login-box">
-        <h2 className="caption">
+        <p>
           Already have an account?{" "}
           <a className="login-text" href="#">
             Log in
           </a>
-        </h2>
+        </p>
       </div>
     </div>
   );

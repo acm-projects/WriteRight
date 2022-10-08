@@ -1,18 +1,17 @@
 import React from 'react';
+import "../../everything.css";
 //InputField.js
 
 class InputField extends React.Component {
   render(){
     return (
-      <div className="inputField">
         <input
-            className='input'
+            className="form-fieldLI"
             type={this.props.type}
             placeholder={this.props.placeholder}
             value={this.props.value}
             onChange={(e) => this.props.onChange(e.target.value)}
         />
-      </div>
     );
   }
 }

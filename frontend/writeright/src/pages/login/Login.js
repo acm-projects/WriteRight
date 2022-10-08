@@ -3,10 +3,10 @@ import {observer} from 'mobx-react';
 import UserStore from './stores/UserStore';
 import LoginForm from './LoginForm';
 import SubmitButton from './SubmitButton';
-import './App.css';
+import "../../everything.css";
 //App.js
 
-class App extends React.Component {
+class Login extends React.Component {
 
   /* 
   //API call for logging in
@@ -60,17 +60,14 @@ class App extends React.Component {
   render(){
     if (UserStore.loading){
       return (
-        <div className="app">
-          <div className='container'>
+          <div>
             Loading, please wait . . .
           </div>
-        </div>
       );
     } else {
       if (UserStore.isLoggedIn){
         return (
-          <div className="app">
-            <div className='container'>
+            <div>
               Welcome, {UserStore.username}
               <SubmitButton
                 text={'Log out'}
@@ -78,16 +75,11 @@ class App extends React.Component {
                 onClick = {() =>  this.doLogout()}
               />
             </div>
-          </div>
         );
       }
       //what happens if you're not logged in
       return (
-        <div className='app'>
-          <div className='container'>
             <LoginForm/>
-          </div>
-        </div>
       );
     }
 

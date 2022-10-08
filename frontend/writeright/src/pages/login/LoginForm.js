@@ -1,5 +1,6 @@
 import React from 'react';
-import title from '../../images/writerightTitle.png';
+import "../../everything.css";
+import logo from '../../images/writerightTitle.png';
 import InputField from './InputField';
 import SubmitButton from './SubmitButton';
 //import UserStore from './stores/UserStore';
@@ -77,29 +78,42 @@ class LoginForm extends React.Component {
 
   render(){
     return (
-      <div className="loginForm">
-      <img src={title}
-        className="loginLogo"
+      <div className="outer">
+      <div className="center-boxLI">
+      <img src={logo}
+        className="logoLI"
         alt="WriteRight"
-            width=""
         />
+        <div className="form-groupLI">
         <InputField
             type='text'
-            placeholder='Username'
+            placeholder='  username'
             value={this.state.username ? this.state.username : ''}
             onChange = {(val) => this.setInputValue('username',val)}
         />
+        </div>
+        <div className="form-groupLI">
         <InputField
             type='password' 
-            placeholder='Password'
+            placeholder='  password'
             value={this.state.password ? this.state.password : ''}
             onChange = {(val) => this.setInputValue('password',val)}
         />
+        </div>
         <SubmitButton
             text='log in'
             disabled={this.state.buttonDisabled}
             onClick={() => this.doLogin()}
         />
+        </div>
+        <div className="signup-box">
+        <p>
+          Don't have an account?{" "}
+          <a className="signup-text" href="#">
+            Sign up
+          </a>
+        </p>
+      </div>
       </div>
     );
   }
