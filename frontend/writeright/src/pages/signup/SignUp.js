@@ -63,6 +63,7 @@ function SignUp() {
                 name="fName"
                 id="fName"
                 value={fName}
+                onChange={onChange}
                 placeholder="First Name"
               />
             </div>
@@ -75,6 +76,7 @@ function SignUp() {
                 name="lName"
                 id="lName"
                 value={lName}
+                onChange={onChange}
                 placeholder="Last Name"
               />
             </div>
@@ -87,6 +89,7 @@ function SignUp() {
                 name="email"
                 id="email"
                 value={email}
+                onChange={onChange}
                 placeholder="Email"
               />
             </div>
@@ -99,6 +102,7 @@ function SignUp() {
                 name="username"
                 id="username"
                 value={username}
+                onChange={onChange}
                 placeholder="Username"
               />
             </div>
@@ -111,6 +115,7 @@ function SignUp() {
                 name="password"
                 id="password"
                 value={password}
+                onChange={onChange}
                 placeholder="Password"
               />
             </div>
