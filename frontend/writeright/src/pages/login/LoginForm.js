@@ -1,110 +1,82 @@
-import React from 'react';
+//Import CSS sheet from same folder
 import "../../everything.css";
 import logo from '../../images/writerightTitle.png';
-import InputField from './InputField';
-import SubmitButton from './SubmitButton';
-//import UserStore from './stores/UserStore';
-//LoginForm.js
+import { useState } from "react";
+import axios from "axios";
 
-class LoginForm extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            username: '',
-            password: '',
-            buttonDisabled: false
-        }
-    }
+function LoginForm() {
+  //Hook to store form data and submit it as a single object
+  const [loginData, setLoginData] = useState({
+    username: "",
+    password: "",
+    buttonDisabled: false
+  });
 
-    setInputValue(property, val){
-        val = val.trim();
-        if(val.length > 15){ //max length of 15
-            return;
-        }
-        this.setState({
-            [property]: val
-        })
-    }
+  let { username, password, buttonDisabled } = loginData;
 
-        //if the username and or password is wrong, the form will be reset
-    resetForm(){
-        this.setState({
-            username:'',
-            password: '',
-            buttonDisabled: false
-        })
-    }
+  //When field in form is changed, variables are updated to take in whatever is in the field
+  const onChange = (e) => {
+    setLoginData((prevState) => ({
+      [e.target.username]: e.target.value,
+      [e.target.password]: e.target.value,
+      [e.target.buttonDisabled]: e.target.value
+    }));
+  };
 
-    /* 
-    //yet another API call yasss
-    async doLogin(){
-        if(!this.state.username){
-            return;
-        }
-        if(!this.state.password){
-            return;
-        }
-        this.setState({
-            buttonDisabled:true
-        })
-        try{
-            let res = await fetch('/login', {
-                method: 'post',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ //will send the username and password to API + check in the database if they exist
-                    username: this.state.username,
-                    password: this.state.password
-                })
-            });
-            let result = await res.json();
-            if (result && result.success){
-                UserStore.isLoggedIn = true;
-                UserStore.username = result.username;
-            } else if (result && result.success === false){
-                this.resetForm();
-                alert(result.msg); //return an error from the API later
-            }
+  //Function to send data from input fields to database
+  const handleSubmit = (e) => {
+    //Prevents blank form from being submitted, which would be bad for the DB
+    e.preventDefault();
 
-        }
-        catch(e) { //if there is trouble connecting to the API, error message + the form is reset
-            console.log(e);
-            this.resetForm();
-        }
-    }
-    */
+    const userData = {
+      username,
+      password,
+      buttonDisabled
+    };
 
-  render(){
-    return (
-      <div className="outer">
+    //Replace with URL that will be used to send post request to the DB
+    const postUrl = "";
+    //Below here write out post request
+
+    //After post request clear form data, set up redirect to new page after user signs up
+  };
+
+  return (
+    <div className="outer">
       <div className="center-boxLI">
       <img src={logo}
         className="logoLI"
         alt="WriteRight"
         />
         <div className="form-groupLI">
-        <InputField
-            type='text'
-            placeholder='  username'
-            value={this.state.username ? this.state.username : ''}
-            onChange = {(val) => this.setInputValue('username',val)}
+        <input
+                required
+                type="text"
+                className="form-fieldLI"
+                name="username"
+                id="username"
+                defaultvalue={username}
+                placeholder="  username"
         />
         </div>
         <div className="form-groupLI">
-        <InputField
-            type='password' 
-            placeholder='  password'
-            value={this.state.password ? this.state.password : ''}
-            onChange = {(val) => this.setInputValue('password',val)}
+        <input
+                required
+                type="password"
+                className="form-fieldLI"
+                name="password"
+                id="password"
+                defaultvalue={password}
+                placeholder="  password"
         />
         </div>
-        <SubmitButton
-            text='log in'
-            disabled={this.state.buttonDisabled}
-            onClick={() => this.doLogin()}
-        />
+        <div className="form-groupLI">
+              <button type="submit" className="submit-btnLI">
+                log in
+              </button>
+            </div>
+
+
         </div>
         <div className="signup-box">
         <p>
@@ -117,6 +89,5 @@ class LoginForm extends React.Component {
       </div>
     );
   }
-}
 
 export default LoginForm;

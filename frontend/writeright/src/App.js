@@ -1,6 +1,8 @@
 import "./App.css";
-import Login from "./pages/login/LoginForm";
+import LoginForm from "./pages/login/LoginForm";
 import SignUp from "./pages/signup/SignUp";
+import LoggedIn from "./pages/LoggedIn";
+import BlankSheet from "./pages/blankSheet";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -11,7 +13,9 @@ function App() {
         {/* Will have to render different pages when user is/isn't logged in */}
         <Routes>
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/home" element={<LoggedIn />} />
+          <Route path="/sheets/blanksheet" element={<BlankSheet />} />
         </Routes>
       </Router>
     </div>

@@ -1,12 +1,13 @@
 import React from 'react';
 import {observer} from 'mobx-react';
-import UserStore from './stores/UserStore';
-import LoginForm from './LoginForm';
-import SubmitButton from './SubmitButton';
-import "../../everything.css";
+import UserStore from '../stores/UserStores';
+import LoginForm from './login/LoginForm';
+import SubmitButton from './login/SubmitButton';
+import "../everything.css";
+import loadingLogo from '../images/logoLoading.png';
 //App.js
 
-class Login extends React.Component {
+class LoggedIn extends React.Component {
 
   /* 
   //API call for logging in
@@ -60,9 +61,12 @@ class Login extends React.Component {
   render(){
     if (UserStore.loading){
       return (
-          <div>
-            Loading, please wait . . .
-          </div>
+        <div className="outer">
+        <img src={loadingLogo}
+          className="logoL"
+          alt="WriteRight"
+          />
+        </div>
       );
     } else {
       if (UserStore.isLoggedIn){
@@ -86,4 +90,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default LoggedIn;
