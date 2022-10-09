@@ -3,8 +3,14 @@ import "./SignUp.css";
 import logo from "../../images/logo.png";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function SignUp() {
+  const navigate = useNavigate();
+  const handleLogin = () => {
+    navigate("/login");
+  };
+
   //Hook to store form data and submit it as a single object
   const [formData, setFormData] = useState({
     fName: "",
@@ -132,7 +138,7 @@ function SignUp() {
       <div className="login-box">
         <h2 className="caption">
           Already have an account?{" "}
-          <a className="login-text" href="#">
+          <a className="login-text" href="" onClick={handleLogin}>
             Log in
           </a>
         </h2>
