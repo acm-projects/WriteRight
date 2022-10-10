@@ -1,0 +1,92 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.2rem;
+  width: 100%;
+}
+.logoBS {
+  width: 180px;
+  height: auto;
+  vertical-align: middle;
+  padding-left: 2rem;
+}
+ul.a {
+  list-style-type: none;
+  background-color: none;
+  overflow: hidden;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+li.a {
+  display: inline;
+  text-decoration: none;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 20px;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+.submit-btnNB {
+  width: 80px;
+  border: none;
+  height: 30px;
+  border-radius: 20px;
+  vertical-align: middle;
+  padding-right: 2rem;
+  color: #000;
+  background-color: transparent;
+}
+.submit-btnNB:hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+/* unvisited link */
+#myprojects a:link,
+#myprojects a:visited {
+  color: #000;
+}
+#myprojects a:hover,
+#myprojects a:active {
+  color: #000;
+  font-weight: 600;
+}
+#sheets a:link,
+#sheets a:visited {
+  color: #8e210c;
+}
+#sheets a:hover,
+#sheets a:active {
+  color: #8e210c;
+  font-weight: 600;
+}
+#grammarchecker a:link,
+#grammarchecker a:visited {
+  color: #9e721a;
+}
+#grammarchecker a:hover,
+#grammarchecker a:active {
+  color: #9e721a;
+  font-weight: 600;
+}
+#writingtips a:link,
+#writingtips a:visited {
+  color: #273660;
+}
+#writingtips a:hover,
+#writingtips a:active {
+  color: #273660;
+  font-weight: 600;
+}
