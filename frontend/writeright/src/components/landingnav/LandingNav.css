@@ -9,7 +9,7 @@
   justify-content: space-between;
 }
 
-.logo {
+.land-logo {
   margin-left: 15px;
   width: 265px;
   height: 61px;
@@ -23,7 +23,7 @@
 }
 
 .nav-option {
-  margin: 10px;
+  margin: 15px;
   font-size: 26px;
 }
 
@@ -35,9 +35,9 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 57px;
+  height: 50px;
   font-weight: 600;
-  width: 114px;
+  width: 110px;
   border-radius: 20px;
   border: none;
 }
@@ -50,14 +50,19 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 57px;
+  height: 50px;
   font-weight: 600;
-  width: 181px;
+  width: 170px;
   border-radius: 20px;
   border: none;
 }
 
-.nav-option:hover,
+.nav-option:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
 button:hover {
   cursor: pointer;
+  scale: 1.05;
 }

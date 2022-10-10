@@ -5,35 +5,35 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 .center-box {
-  margin-top: 25px;
-  display: flex;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-image: url(../../images/formbackground.png);
+  align-items: center;
+  background-image: url(../../images/LoginBox.png);
   background-size: cover;
   background-position: center;
-  height: 530px;
-  width: 370px;
+  height: 560px;
+  width: 420px;
 }
 
 .form-group {
-  margin: 25px;
+  margin: 15px;
 }
 
 .form-field {
-  padding: 5px;
+  padding: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   width: 250px;
-  border-radius: 15px;
-  border: 0.5px solid black;
+  border-radius: 20px;
+  border: none;
   cursor: pointer;
 }
 
-.submit-btn {
+.submit-btnSU {
   width: 250px;
   border: none;
   height: 30px;
@@ -41,12 +41,12 @@
   padding: 5px;
   margin-top: 20px;
   color: white;
-  background-color: #b48a38;
+  background-color: #273660;
 }
 
-.submit-btn:hover {
+.submit-btnSU:hover {
   cursor: pointer;
-  background-color: #a78134;
+  background-color: #1e2a4b;
 }
 
 .login-box {
@@ -55,7 +55,7 @@
   width: 360px;
   border-radius: 20px;
   color: white;
-  background-color: #273660;
+  background-color: #b48a38;
   font-size: 14px;
   text-align: center;
   display: flex;
@@ -72,4 +72,9 @@
   text-decoration: none;
   color: white;
   font-weight: 700;
+}
+
+.logo {
+  margin-top: 60px;
+  margin-bottom: 25px;
 }

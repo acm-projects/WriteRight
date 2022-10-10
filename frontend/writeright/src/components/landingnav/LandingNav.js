@@ -16,7 +16,7 @@ function LandingNav() {
 
   return (
     <div className="nav">
-      <img src={whitelogo} className="logo" alt="Logo" />
+      <img src={whitelogo} className="land-logo" alt="Logo" />
       <div className="nav-options">
         <div className="nav-option" onClick={handleHome}>
           Home
