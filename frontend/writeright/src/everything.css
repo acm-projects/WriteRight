@@ -1,235 +1,278 @@
-*{
-  font-size: 17px;
-  box-sizing: border-box;
-  margin:0;
-  padding: 0;
+* {
+	font-size: 17px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 .outer {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
-
+/*SIGN UP PAGE*/
 .center-boxSU {
-  display: flex;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  background-image: url('./images/LoginBox.png');
-  background-size: cover;
-  background-position: center;
-  height: 450px;
-  width: 370px;
+	display: flex;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	background-image: url('./images/LoginBox.png');
+	background-size: cover;
+	background-position: center;
+	height: 450px;
+	width: 370px;
 }
-.logoSU{
-  margin-bottom: 15px;
+.logoSU {
+	margin-bottom: 15px;
 }
 .form-groupSU {
-  margin: 15px;
+	margin: 15px;
 }
 .form-fieldSU {
-  width: 250px;
-  height: 30px;
-  border-radius: 20px;
-  border: 0.5px #fff;
-  cursor: pointer;
+	width: 250px;
+	height: 30px;
+	border-radius: 20px;
+	border: 0.5px #fff;
+	cursor: pointer;
 }
 .submit-btnSU {
-  width: 260px;
-  border: none;
-  height: 30px;
-  border-radius: 20px;
-  padding: 5px;
-  margin-top: 15px;
-  color: white;
-  border: 2px #b48a38;
-  background-color: #b48a38;
+	width: 260px;
+	border: none;
+	height: 30px;
+	border-radius: 20px;
+	padding: 5px;
+	margin-top: 15px;
+	color: white;
+	border: 2px #b48a38;
+	background-color: #b48a38;
 }
 .submit-btnSU:hover {
-  cursor: pointer;
-  background-color: #a78134;
+	cursor: pointer;
+	background-color: #a78134;
 }
 .login-box {
-  margin-top: 25px;
-  height: 80px;
-  width: 360px;
-  border-radius: 20px;
-  color: white;
-  background-color: #273660;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	margin-top: 25px;
+	height: 80px;
+	width: 360px;
+	border-radius: 20px;
+	color: white;
+	background-color: #273660;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .login-text {
-  font-style: italic;
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
+	font-style: italic;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
 }
 .login-text:hover {
-  cursor: pointer;
-  background-color: #414373;
+	cursor: pointer;
+	background-color: #414373;
 }
 
-
+/*LOGIN PAGE*/
 .center-boxLI {
-  display: flex;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  background-image: url('./images/LoginBox.png');
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-  width: 370px;
+	display: flex;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	background-image: url('./images/LoginBox.png');
+	background-size: cover;
+	background-position: center;
+	height: 400px;
+	width: 370px;
 }
-.logoLI{
-  margin-top: 60px;
-  margin-bottom: 25px;
+.logoLI {
+	margin-top: 60px;
+	margin-bottom: 25px;
 }
 .form-groupLI {
-  margin: 9px;
+	margin: 9px;
 }
 .form-fieldLI {
-  width: 250px;
-  height: 30px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
+	width: 250px;
+	height: 30px;
+	border-radius: 20px;
+	border: none;
+	cursor: pointer;
 }
 .submit-btnLI {
-  width: 260px;
-  border: none;
-  height: 30px;
-  border-radius: 20px;
-  padding: 5px;
-  margin-top: 30px;
-  color: white;
-  border: 2px #273660;
-  background-color: #273660;
+	width: 260px;
+	border: none;
+	height: 30px;
+	border-radius: 20px;
+	padding: 5px;
+	margin-top: 30px;
+	color: white;
+	border: 2px #273660;
+	background-color: #273660;
 }
 .submit-btnLI:hover {
-  cursor: pointer;
-  background-color: #1e2a4b;
+	cursor: pointer;
+	background-color: #1e2a4b;
 }
 .signup-box {
-  margin-top: 25px;
-  height: 80px;
-  width: 360px;
-  border-radius: 20px;
-  color: white;
-  background-color: #b48b38;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	margin-top: 25px;
+	height: 80px;
+	width: 360px;
+	border-radius: 20px;
+	color: white;
+	background-color: #b48b38;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .signup-text {
-  font-style: italic;
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
+	font-style: italic;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
 }
 .signup-text:hover {
-  cursor: pointer;
-  background-color: #9e721a;
+	cursor: pointer;
+	background-color: #9e721a;
 }
 
-
- 
-.logoL{
-  /*logo for loading page*/
-  width: 330px;
-  height: auto;  
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/*LOADING PAGE*/
+.logoL {
+	/*logo for loading page*/
+	width: 330px;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-
-
-
-nav{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 1.2rem;
-  width: 100%;
+/*OVERALL NAVIGATION BAR*/
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 1.2rem;
+	width: 100%;
 }
-.logoBS{
-  width: 180px;
-  height: auto;
-  vertical-align: middle;
-  padding-left: 2rem;
+.logoBS {
+	width: 180px;
+	height: auto;
+	vertical-align: middle;
+	padding-left: 2rem;
 }
-ul.a{
-  list-style-type: none;
-  background-color: none;
-  overflow: hidden;
-  text-align: center;
-  margin:0;
-  padding: 0;
-  display: flex;
+ul.a {
+	list-style-type: none;
+	background-color: none;
+	overflow: hidden;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	display: flex;
 }
-li.a{
-  display: inline;
-  text-decoration: none;
-  padding-left: 1em;
-  padding-right: 1em;
-  font-size: 20px;
+li.a {
+	display: inline;
+	text-decoration: none;
+	padding-left: 1em;
+	padding-right: 1em;
+	font-size: 20px;
 }
-a:link { text-decoration: none; }
-a:visited { text-decoration: none; }
-a:hover { text-decoration: none; }
-a:active { text-decoration: none; }
-.submit-btnNB{
-  width: 80px;
-  border: none;
-  height: 30px;
-  border-radius: 20px;
-  vertical-align: middle;
-  padding-right: 2rem;
-  color: #000;
-  background-color: transparent;
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+.submit-btnNB {
+	width: 80px;
+	border: none;
+	height: 30px;
+	border-radius: 20px;
+	vertical-align: middle;
+	padding-right: 2rem;
+	color: #000;
+	background-color: transparent;
 }
 .submit-btnNB:hover {
-  cursor: pointer;
-  font-weight: 600;
+	cursor: pointer;
+	font-weight: 600;
 }
 /* unvisited link */
-#myprojects a:link, #myprojects a:visited { color: #000;}
-#myprojects a:hover, #myprojects a:active{
-  color: #000;
-  font-weight: 600;
+#myprojects a:link,
+#myprojects a:visited {
+	color: #000;
 }
-#sheets a:link, #sheets a:visited { color: #8E210C;}
-#sheets a:hover, #sheets a:active{
-  color: #8E210C;
-  font-weight: 600;
+#myprojects a:hover,
+#myprojects a:active {
+	color: #000;
+	font-weight: 600;
 }
-#grammarchecker a:link, #grammarchecker a:visited { color: #9E721A;}
-#grammarchecker a:hover, #grammarchecker a:active{
-  color: #9E721A;
-  font-weight: 600;
+#sheets a:link,
+#sheets a:visited {
+	color: #8e210c;
 }
-#writingtips a:link, #writingtips a:visited{ color: #273660;}
-#writingtips a:hover, #writingtips a:active{
-  color: #273660;
-  font-weight: 600;
+#sheets a:hover,
+#sheets a:active {
+	color: #8e210c;
+	font-weight: 600;
+}
+#grammarchecker a:link,
+#grammarchecker a:visited {
+	color: #9e721a;
+}
+#grammarchecker a:hover,
+#grammarchecker a:active {
+	color: #9e721a;
+	font-weight: 600;
+}
+#writingtips a:link,
+#writingtips a:visited {
+	color: #273660;
+}
+#writingtips a:hover,
+#writingtips a:active {
+	color: #273660;
+	font-weight: 600;
 }
 
+/*idk how to describe it but it's like a nav bar but under the actual nav bar(?)*/
+.sNavRed{
+  margin: 1rem;
+  display: inline;
+  color: #8e210c;
+}
+hr.redSolid {
+	margin-left: 1rem;
+	margin-right: 1rem;
+	border-top: 2px solid #8e210c;
+}
+.redButton{
+	/*width: 100px;*/
+	border: none;
+	/*height: 40px;*/
+	border-radius: 20px;
+	vertical-align: right;
+	padding: 10px;
+	color: white;
+	background-color: #8e210c;
+}
 
-.bg{
-  background-image: url('./images/RedGrayBG.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
+/*BACKGROUNDS FOR EVERYTHING*/
+.bgRedGray {
+	background-image: url('./images/RedGrayBG.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
 }

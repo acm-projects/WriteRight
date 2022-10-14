@@ -127,7 +127,7 @@ function SignUp() {
       <div className="login-box">
         <p>
           Already have an account?{" "}
-          <a className="login-text" href="#">
+          <a className="login-text" href="../login">
             Log in
           </a>
         </p>

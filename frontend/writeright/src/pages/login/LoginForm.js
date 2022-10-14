@@ -81,7 +81,7 @@ function LoginForm() {
         <div className="signup-box">
         <p>
           Don't have an account?{" "}
-          <a className="signup-text" href="#">
+          <a className="signup-text" href="../signup">
             Sign up
           </a>
         </p>

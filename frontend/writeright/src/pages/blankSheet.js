@@ -37,7 +37,7 @@ function BlankSheet() {
   };
   return (
     <body>
-    <div className="bg">
+    <div className="bgRedGray">
         <nav>
             <img src={logo} className="logoBS" alt="Logo" />
           <ul class="a">
@@ -56,6 +56,13 @@ function BlankSheet() {
           </ul>
             <button type="submit" className="submit-btnNB">login</button>
         </nav>
+        <div>
+          <a className="sNavRed" href="">Sheets</a><p className="sNavRed"> &gt; </p><a className="sNavRed" href="">New Blank Sheet</a>
+          <button className="redButton">Save</button>
+          <button className="redButton">Save To</button>
+          <hr class="redSolid"></hr>
+        </div>
+
     </div>
     </body>
   );
