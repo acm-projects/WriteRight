@@ -154,7 +154,7 @@
 }
 
 /*OVERALL NAVIGATION BAR*/
-nav {
+nav.main {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -248,26 +248,38 @@ a:active {
 }
 
 /*idk how to describe it but it's like a nav bar but under the actual nav bar(?)*/
+nav.sub{
+	margin-top: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
 .sNavRed{
-  margin: 1rem;
   display: inline;
   color: #8e210c;
+  margin-left: 1rem;
 }
 hr.redSolid {
-	margin-left: 1rem;
-	margin-right: 1rem;
-	border-top: 2px solid #8e210c;
+	margin-top: 0.4rem;
+	margin-left: 2rem;
+	margin-right: 2rem;
+	border-top: 1px solid #8e210c;
 }
 .redButton{
-	/*width: 100px;*/
 	border: none;
-	/*height: 40px;*/
 	border-radius: 20px;
-	vertical-align: right;
-	padding: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 9px;
+	padding-right: 9px;
+	margin-right: 2rem;
 	color: white;
 	background-color: #8e210c;
 }
+.rightBtn{
+	text-align: right;
+}
+
 
 /*BACKGROUNDS FOR EVERYTHING*/
 .bgRedGray {
