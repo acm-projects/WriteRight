@@ -1,7 +1,6 @@
 //Import CSS sheet from same folder
 import "../everything.css";
 import logo from '../images/writerightTitle.png';
-import SubmitButton from './login/SubmitButton';
 import { useState } from "react";
 import axios from "axios";
 
@@ -54,7 +53,7 @@ function BlankSheet() {
               <a href="">Writing Tips</a>
             </li>
           </ul>
-            <button type="submit" className="submit-btnNB">login</button>
+            <button className="submit-btnNB">log out</button>
         </nav>
         <nav className="sub">
           <ul class="a">
@@ -69,11 +68,53 @@ function BlankSheet() {
             </li>
           </ul>
           <nav className="rightBtn">
-            <button className="redButton">Save</button>
-            <button className="redButton">Save To</button>
+            <button type="submit" className="redButton">Save</button>
+            <button type="submit" className="redButton">Save To</button>
           </nav>
         </nav>
         <hr class="redSolid"></hr>
+
+        <div class='parentNBS'>
+            <div class='child1NBS'>
+                <nav className="textStyle">
+                  <ul className="b">
+                    <li>
+                      <button className="textStyleBtn" id="N">
+                        N
+                      </button>
+                    </li>
+                    <li>
+                      <button className="textStyleBtn" id="B">
+                        B
+                      </button>
+                    </li>
+                    <li>
+                      <button className="textStyleBtn" id="I">
+                        I
+                      </button>
+                    </li>
+                    <li>
+                      <button className="textStyleBtn" id="U">
+                        U
+                      </button>
+                    </li>
+                  </ul>
+                </nav>
+            </div>
+            <div class='child2NBS'>
+            <form onSubmit={handleSubmit} className="formBS">
+              <textarea
+                required                 
+                type="text"
+                className="blankSheet"
+                name="text"
+                id="text"
+                defaultvalue={text}
+                placeholder="Start typing here . ."
+              ></textarea>
+              </form>
+            </div>
+        </div>
 
     </div>
     </body>

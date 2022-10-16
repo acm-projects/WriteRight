@@ -3,6 +3,8 @@ import LoginForm from "./pages/login/LoginForm";
 import SignUp from "./pages/signup/SignUp";
 import LoggedIn from "./pages/LoggedIn";
 import BlankSheet from "./pages/blankSheet";
+import CharacterLog from "./pages/characterLog";
+import AtHome from "./pages/atHome";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -15,7 +17,9 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/home" element={<LoggedIn />} />
-          <Route path="/sheets/blanksheet" element={<BlankSheet />} />
+          <Route path="/sheets/blank-sheet" element={<BlankSheet />} />
+          <Route path="/sheets/character-log" element={<CharacterLog />} />
+          <Route path="/sheets/at-home-with-your-character" element={<AtHome />} />
         </Routes>
       </Router>
     </div>

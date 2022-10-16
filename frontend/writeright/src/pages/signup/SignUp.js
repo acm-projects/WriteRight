@@ -62,8 +62,8 @@ function SignUp() {
                 className="form-fieldSU"
                 name="fName"
                 id="fName"
-                value={fName}
-                placeholder="  first name"
+                defaultvalue={fName}
+                placeholder="first name"
               />
             </div>
 
@@ -74,8 +74,8 @@ function SignUp() {
                 className="form-fieldSU"
                 name="lName"
                 id="lName"
-                value={lName}
-                placeholder="  last name"
+                defaultvalue={lName}
+                placeholder="last name"
               />
             </div>
 
@@ -86,8 +86,8 @@ function SignUp() {
                 className="form-fieldSU"
                 name="email"
                 id="email"
-                value={email}
-                placeholder="  email"
+                defaultvalue={email}
+                placeholder="email"
               />
             </div>
 
@@ -98,8 +98,8 @@ function SignUp() {
                 className="form-fieldSU"
                 name="username"
                 id="username"
-                value={username}
-                placeholder="  username"
+                defaultvalue={username}
+                placeholder="username"
               />
             </div>
 
@@ -110,8 +110,8 @@ function SignUp() {
                 className="form-fieldSU"
                 name="password"
                 id="password"
-                value={password}
-                placeholder="  password"
+                defaultvalue={password}
+                placeholder="password"
               />
             </div>
 

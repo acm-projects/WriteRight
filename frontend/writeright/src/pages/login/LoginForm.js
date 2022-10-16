@@ -43,6 +43,7 @@ function LoginForm() {
 
   return (
     <div className="outer">
+    <form onSubmit={handleSubmit}>
       <div className="center-boxLI">
       <img src={logo}
         className="logoLI"
@@ -56,7 +57,7 @@ function LoginForm() {
                 name="username"
                 id="username"
                 defaultvalue={username}
-                placeholder="  username"
+                placeholder="username"
         />
         </div>
         <div className="form-groupLI">
@@ -67,7 +68,7 @@ function LoginForm() {
                 name="password"
                 id="password"
                 defaultvalue={password}
-                placeholder="  password"
+                placeholder="password"
         />
         </div>
         <div className="form-groupLI">
@@ -78,6 +79,7 @@ function LoginForm() {
 
 
         </div>
+        </form>
         <div className="signup-box">
         <p>
           Don't have an account?{" "}
