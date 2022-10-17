@@ -59,10 +59,10 @@
 
 .nav-option:hover {
   cursor: pointer;
-  scale: 1.1;
+  scale: 1.05;
 }
 
-button:hover {
+.nav button:hover {
   cursor: pointer;
-  scale: 1.05;
+  scale: 1.03;
 }
