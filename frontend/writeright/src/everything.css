@@ -130,6 +130,7 @@ nav {
   align-items: center;
   padding-top: 1.2rem;
   width: 100%;
+  background: transparent;
 }
 .logoBS {
   width: 180px;
@@ -218,8 +219,6 @@ a:active {
 }
 
 .bg {
-  background-image: url("./images/RedGrayBG.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
 }

@@ -51,4 +51,6 @@
 
 .landing-sign-btn:hover {
   background-color: #1e2a4b;
+  scale: 1.03;
+  cursor: pointer;
 }
