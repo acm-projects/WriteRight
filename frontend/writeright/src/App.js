@@ -3,6 +3,7 @@ import SignUp from "./pages/signup/SignUp";
 import LandingPage from "./pages/landing/LandingPage";
 import LoginForm from "./pages/login/LoginForm";
 import StoryArc from "./pages/storyarc/StoryArc";
+import Grammar from "./pages/grammar/Grammar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           {/*When user is logged in, allow these pages to be accessed
           Will change routing when backend is developed*/}
           <Route path="/story-arc" element={<StoryArc />} />
+          <Route path="/grammar" element={<Grammar />} />
         </Routes>
       </Router>
     </div>
