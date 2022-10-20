@@ -47,6 +47,20 @@
   text-decoration: none;
   color: white;
 }
+
+.login-box {
+  margin-top: 25px;
+  height: 80px;
+  width: 360px;
+  border-radius: 20px;
+  color: white;
+  background-color: #273660;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .login-text:hover {
   cursor: pointer;
   background-color: #9e721a;
@@ -221,4 +235,206 @@ a:active {
 .bg {
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+nav.sub {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.sNavRed {
+  display: inline;
+  color: #8e210c;
+  margin-left: 1rem;
+}
+hr.redSolid {
+  margin-top: 0.4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-top: 1px solid #8e210c;
+}
+.redButton {
+  border: none;
+  border-radius: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 9px;
+  padding-right: 9px;
+  margin-right: 2rem;
+  color: white;
+  background-color: #8e210c;
+}
+.rightBtn {
+  text-align: right;
+}
+
+/*THE TEXT STYLE BAR*/
+nav.textStyle {
+  color: #8e210c;
+  float: right;
+  text-align: center;
+  background-color: #e4cbc7;
+  width: 3rem;
+  border-radius: 10px;
+}
+ul.b {
+  list-style: none;
+}
+.textStyleBtn {
+  background-color: #fff;
+  color: #8e210c;
+  border-radius: 50px;
+  border: none;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 8%;
+  padding-bottom: 8%;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+.textStyleBtn:hover {
+  background-color: #fcf4f2;
+}
+.textStyleBtn:focus {
+  background-color: #8e210c;
+  color: #fff;
+}
+#N {
+  margin-top: 10px;
+}
+#B {
+  font-weight: bold;
+}
+#I {
+  font-style: italic;
+  padding-left: 22%;
+  padding-right: 22%;
+}
+#U {
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+/*NEW BLANK SHEET*/
+.parentNBS {
+  text-align: center;
+  margin-top: 1rem;
+  height: 90%;
+}
+.child1NBS {
+  display: inline-block;
+  width: 25%;
+  height: 90%;
+}
+.child2NBS {
+  display: inline-block;
+  width: 75%;
+  height: 90%;
+}
+.formBS {
+  width: 100%;
+  height: 100%;
+}
+.blankSheet {
+  margin-left: 10px;
+  float: left;
+  width: 70%;
+  height: 100%;
+  padding: 1.5%;
+  border: none;
+  box-shadow: 5px 5px 10px #ebdfdd;
+  font-family: sans-serif;
+}
+
+/*CHARACTER LOG*/
+.parentCL {
+  margin-top: 2rem;
+  text-align: center;
+}
+table.charaLog {
+  margin: auto;
+  width: 75%;
+  height: 90%;
+  background-color: #f1e7e5;
+  border-radius: 10px;
+}
+tr,
+td {
+  padding: 0.8%;
+}
+.titlesCL {
+  font-weight: bold;
+  color: #8e210c;
+}
+.form-fieldCLstory {
+  border: 1px solid #dbc7c3;
+  border-radius: 20px;
+  padding: 2%;
+  padding-left: 3%;
+}
+.detailCL {
+  width: 45%;
+}
+.form-fieldCL {
+  border: none;
+  text-align: left;
+  padding: 2%;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  font-family: sans-serif;
+}
+
+/*AT HOME WITH YOUR CHARACTER*/
+.parentAH {
+  margin-top: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+table.atHome {
+  margin: auto;
+  width: 75%;
+  height: 90%;
+  background-color: #f1e7e5;
+  border-radius: 10px;
+}
+tr,
+td {
+  padding: 1%;
+}
+.titlesAH {
+  font-weight: bold;
+  color: #8e210c;
+}
+.questionsCL {
+  width: 150px;
+  font-weight: bold;
+  color: #8e210c;
+  padding-right: 9%;
+}
+.form-fieldAH {
+  border: none;
+  text-align: left;
+  padding: 2%;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  font-family: sans-serif;
+}
+
+/*BACKGROUNDS FOR EVERYTHING*/
+.bgRedGray {
+  background-image: url("./images/RedGrayBG.png");
+  background-size: cover;
+  background-repeat: repeat;
+  height: 150vh;
+}
+.bgRedWhite {
+  background-image: url("./images/RedWhiteBG.png");
+  background-size: cover;
+  background-repeat: repeat;
+  height: 150vh;
 }

@@ -4,6 +4,10 @@ import LandingPage from "./pages/landing/LandingPage";
 import LoginForm from "./pages/login/LoginForm";
 import StoryArc from "./pages/storyarc/StoryArc";
 import Grammar from "./pages/grammar/Grammar";
+import LoggedIn from "./pages/LoggedIn";
+import BlankSheet from "./pages/blankSheet";
+import CharacterLog from "./pages/characterLog";
+import AtHome from "./pages/atHome";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -19,6 +23,13 @@ function App() {
           Will change routing when backend is developed*/}
           <Route path="/story-arc" element={<StoryArc />} />
           <Route path="/grammar" element={<Grammar />} />
+          <Route path="/home" element={<LoggedIn />} />
+          <Route path="/sheets/blank-sheet" element={<BlankSheet />} />
+          <Route path="/sheets/character-log" element={<CharacterLog />} />
+          <Route
+            path="/sheets/at-home-with-your-character"
+            element={<AtHome />}
+          />
         </Routes>
       </Router>
     </div>
