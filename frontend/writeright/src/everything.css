@@ -5,6 +5,10 @@
 	padding: 0;
 }
 
+textarea{
+	resize: none;
+}
+
 .outer {
 	display: flex;
 	flex-direction: column;
@@ -437,6 +441,52 @@ ul.b{
 	font-family: sans-serif;
   }
 
+  /*WRITING TIPS*/
+  .parentWT{
+	padding: 2%;
+	text-align: left;
+	width: 70%;
+	margin: auto;
+  }
+  .imageWT{
+	display: block;
+	margin: auto;
+	width: 100%;
+	height: auto;
+	border-radius: 15px;
+	overflow: hidden;
+	padding-bottom: 5%;
+  }
+  .row1WT{
+	padding-top: 5%;
+	display: inline;
+	justify-content: space-between;
+	align-items: center;
+  }
+  .row2WT{
+	width: 100%;
+	padding-top: 5%;
+	display: inline;
+	justify-content: space-between;
+	align-items: left;
+  }
+  button.postWT{
+	background-color: #C7CBD6;
+	border-radius: 15px;
+	overflow: hidden;
+	text-align: left;
+	font-weight: bold;
+	font-size: 23px;
+	border: none;
+	width: 30%;
+	margin: auto;
+	padding: 2%;
+  }
+  span.articleWT{
+	font-weight: 100;
+	font-size: 14px;
+  }
+  
 
 
 /*BACKGROUNDS FOR EVERYTHING*/
@@ -451,4 +501,10 @@ ul.b{
 	background-size: cover;
 	background-repeat: repeat;
 	height: 150vh;
+}
+.bgBlue {
+	background-image: url('./images/blueBG.png');
+	background-size: cover;
+	background-repeat: repeat;
+	height: 100vh;
 }
