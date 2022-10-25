@@ -9,6 +9,7 @@ function Grammar() {
   const handleChange = (e) => {
     setStory(e.target.value);
     setCount(e.target.value.length);
+    console.log(story);
   };
 
   //Function to send request to API

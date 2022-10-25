@@ -4,13 +4,17 @@
   justify-content: center;
   align-items: center;
   margin: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background: transparent;
+  background-color: #f1e7e5;
+  border-radius: 20px;
 }
 
 .arc-outer {
   display: flex;
   flex-direction: column;
-  background-image: url("../../images/rainbowWhiteBG.png");
+  background-image: url("../../images/RedWhiteBG.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: -5% 10%;
@@ -29,7 +33,8 @@
   margin: 20px;
   margin-top: 10px;
   padding: 10px;
-  border: 2px solid black;
+  resize: none;
+  border: 2px solid #8e210c;
   border-radius: 20px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -40,6 +45,11 @@
   font-weight: 500;
 }
 
+.arc-title {
+  font-weight: bold;
+  color: #8e210c;
+}
+
 .arc-submit {
   margin-bottom: 5%;
   border-radius: 20px;
@@ -47,10 +57,17 @@
   height: 40px;
   cursor: pointer;
   border: none;
-  background-color: #273660;
+  background-color: #8e210c;
   color: white;
 }
 
 .arc-submit:hover {
   scale: 1.03;
+  filter: saturate(110%);
+}
+
+.story-arc {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }

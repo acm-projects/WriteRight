@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 function LoginForm() {
   const navigate = useNavigate();
   const goSign = () => {
-    navigate("/signup");
+    navigate("/sign-up");
   };
   //Hook to store form data and submit it as a single object
   const [loginData, setLoginData] = useState({

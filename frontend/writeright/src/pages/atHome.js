@@ -1,6 +1,8 @@
 //Import CSS sheet from same folder
 import "../everything.css";
 import logo from "../images/writerightTitle.png";
+import Nav from "../components/nav/Nav";
+import SubNav from "../components/subnav/SubNav";
 import { useState } from "react";
 import axios from "axios";
 
@@ -125,32 +127,7 @@ function AtHome() {
           </ul>
           <button className="submit-btnNB">log out</button>
         </nav>
-        <nav className="sub">
-          <ul class="a">
-            <li class="a">
-              <a className="sNavRed" href="">
-                Sheets
-              </a>
-            </li>
-            <li class="a">
-              <p className="sNavRed"> &gt; </p>
-            </li>
-            <li class="a">
-              <a className="sNavRed" href="">
-                New At Home with Your Character
-              </a>
-            </li>
-          </ul>
-          <nav className="rightBtn">
-            <button type="submit" className="redButton">
-              Save
-            </button>
-            <button type="submit" className="redButton">
-              Save To
-            </button>
-          </nav>
-        </nav>
-        <hr class="redSolid"></hr>
+        <SubNav subName="New At Home with Your Character" />
 
         <form onSubmit={handleSubmit}>
           <div class="parentAH">

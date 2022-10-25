@@ -1,7 +1,9 @@
 import React from "react";
 import "./StoryArc.css";
 import { useState } from "react";
+import "../../everything.css";
 import Nav from "../../components/nav/Nav";
+import SubNav from "../../components/subnav/SubNav";
 
 function StoryArc() {
   //UseState with variables that will be sent to database
@@ -31,6 +33,7 @@ function StoryArc() {
   return (
     <div className="arc-outer">
       <Nav />
+      <SubNav subName="New 8 Point Story-Arc" />
       <div className="story-arc">
         <div className="arc-section">
           <h2 className="arc-title">Stasis</h2>

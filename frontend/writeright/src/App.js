@@ -17,11 +17,11 @@ function App() {
         <Routes>
           {/*Conditionally Render these pages when user is NOT logged in*/}
           <Route path="/" element={<LandingPage />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/sign-up" element={<SignUp />} />
           <Route path="/login" element={<LoginForm />} />
           {/*When user is logged in, allow these pages to be accessed
           Will change routing when backend is developed*/}
-          <Route path="/story-arc" element={<StoryArc />} />
+          <Route path="/sheets/story-arc" element={<StoryArc />} />
           <Route path="/grammar" element={<Grammar />} />
           <Route path="/home" element={<LoggedIn />} />
           <Route path="/sheets/blank-sheet" element={<BlankSheet />} />
