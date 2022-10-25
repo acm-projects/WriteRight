@@ -1,14 +1,11 @@
 .grammar-outer {
   display: flex;
   flex-direction: column;
-  background-image: url("../../images/rainbowWhiteBG.png");
+  background-image: url("../../images/YellowBG.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: -5% 10%;
+  background-position: -20% 10%;
   background-size: 100vmax 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -32,16 +29,20 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 3rem;
 }
 
 .grammar {
-  margin-top: 25px;
-  width: 90%;
+  margin-top: -65px;
+  z-index: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: 100vh;
 }
 
 .upload-button {
@@ -65,7 +66,7 @@
 .checker-section {
   margin-top: 5%;
   width: 90%;
-  height: 50vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,11 +76,12 @@
 .grammar-box {
   line-height: 150%;
   width: 95%;
+  resize: none;
   height: 100%;
   margin: 20px;
   margin-top: 10px;
   padding: 10px;
-  border: 2px solid black;
+  border: 2px solid #caad73;
   border-radius: 20px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -107,11 +109,11 @@ textarea {
 .grammar-submit-btn:hover {
   cursor: pointer;
   scale: 1.03;
-  filter: saturate(140%);
+  filter: saturate(130%);
 }
 
 .checker-header {
-  width: 90%;
+  width: 92%;
   display: flex;
   justify-content: flex-end;
   color: gray;

@@ -138,14 +138,15 @@
   justify-content: center;
 }
 
-nav {
+nav.main {
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 1.2rem;
   width: 100%;
-  background: transparent;
 }
+
 .logoBS {
   width: 180px;
   height: auto;
@@ -181,7 +182,7 @@ a:active {
   text-decoration: none;
 }
 .submit-btnNB {
-  width: 80px;
+  width: 120px;
   border: none;
   height: 30px;
   border-radius: 20px;
@@ -250,6 +251,7 @@ nav.sub {
 }
 hr.redSolid {
   margin-top: 0.4rem;
+  min-width: 95%;
   margin-left: 2rem;
   margin-right: 2rem;
   border-top: 1px solid #8e210c;

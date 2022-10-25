@@ -8,7 +8,7 @@ function LandingNav() {
     navigate("/login");
   };
   const handleSignUp = () => {
-    navigate("/signup");
+    navigate("/sign-up");
   };
   const handleHome = () => {
     navigate("/");
