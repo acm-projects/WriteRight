@@ -5,7 +5,13 @@ import LoggedIn from "./pages/LoggedIn";
 import BlankSheet from "./pages/blankSheet";
 import CharacterLog from "./pages/characterLog";
 import AtHome from "./pages/atHome";
+import StoryArc from "./pages/storyarc/StoryArc";
 import WritingTips from "./pages/writingTips";
+import Grammar from "./pages/grammar/Grammar";
+import LandingPage from "./pages/landingpage/LandingPage";
+import Sheets from "./pages/sheets";
+import MyProjects from "./pages/myProjects";
+import MyProjectsFolder from "./pages/myProjectsFolder";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -15,13 +21,19 @@ function App() {
         {/* Nav component would go here */}
         {/* Will have to render different pages when user is/isn't logged in */}
         <Routes>
+        <Route path="/" element={<LandingPage />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/home" element={<LoggedIn />} />
           <Route path="/sheets/blank-sheet" element={<BlankSheet />} />
           <Route path="/sheets/character-log" element={<CharacterLog />} />
           <Route path="/sheets/at-home-with-your-character" element={<AtHome />} />
-          <Route path="/sheets/writing-tips" element={<WritingTips />} />
+          <Route path="/writing-tips" element={<WritingTips />} />
+          <Route path="/sheets/story-arc" element={<StoryArc />} />
+          <Route path="/grammar-checker" element={<Grammar />} />
+          <Route path="/sheets" element={<Sheets />} />
+          <Route path="/my-projects" element={<MyProjects />} />
+          <Route path="/my-projects/Project-1" element={<MyProjectsFolder />} />
         </Routes>
       </Router>
     </div>

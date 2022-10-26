@@ -75,18 +75,18 @@ function AtHome() {
     <div className="bgRedWhite">
         <nav className="main">
             <img src={logo} className="logoBS" alt="Logo" />
-          <ul class="a">
+            <ul class="a">
             <li class="a" id="myprojects">
-              <a href="">My Projects</a>
+              <a href="../my-projects">My Projects</a>
             </li>
             <li class="a" id="sheets">
-              <a href="">Sheets</a>
+              <a href="../sheets">Sheets</a>
             </li>
             <li class="a" id="grammarchecker">
-              <a href="">Grammar Checker</a>
+              <a href="../grammar-checker">Grammar Checker</a>
             </li>
             <li class="a" id="writingtips">
-              <a href="">Writing Tips</a>
+              <a href="../writing-tips">Writing Tips</a>
             </li>
           </ul>
             <button className="submit-btnNB">log out</button>
@@ -94,13 +94,13 @@ function AtHome() {
         <nav className="sub">
           <ul class="a">
             <li class="a">
-              <a className="sNavRed" href="">Sheets</a>
+              <a className="sNavRed" href="/sheets">Sheets</a>
             </li>
             <li class="a">
               <p className="sNavRed"> &gt; </p>
             </li>
             <li class="a">
-              <a className="sNavRed" href="">New At Home with Your Character</a>
+              <a className="sNavRed" href="/sheets/at-home-with-your-character">At Home with Your Character</a>
             </li>
           </ul>
           <nav className="rightBtn">

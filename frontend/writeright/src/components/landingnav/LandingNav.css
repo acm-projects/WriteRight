@@ -1,0 +1,68 @@
+.nav {
+    height: 130px;
+    width: 100%;
+    background-color: #273660;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .land-logo {
+    margin-left: 15px;
+    width: 265px;
+    height: 61px;
+  }
+  
+  .nav-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .nav-option {
+    margin: 15px;
+    font-size: 26px;
+  }
+  
+  .login-btn {
+    font-size: 22px;
+    background-color: white;
+    color: #273660;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    font-weight: 600;
+    width: 110px;
+    border-radius: 20px;
+    border: none;
+  }
+  
+  .sign-btn {
+    font-size: 22px;
+    background-color: white;
+    color: #273660;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    font-weight: 600;
+    width: 170px;
+    border-radius: 20px;
+    border: none;
+  }
+  
+  .nav-option:hover {
+    cursor: pointer;
+    scale: 1.05;
+  }
+  
+  .nav button:hover {
+    cursor: pointer;
+    scale: 1.03;
+  }
