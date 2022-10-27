@@ -30,6 +30,7 @@ function StoryArc() {
   };
 
   return (
+    <div className="bgRedWhite">
     <div className="arc-outer">
               <nav className="main">
             <img src={logo} className="logoBS" alt="Logo" />
@@ -62,8 +63,8 @@ function StoryArc() {
             </li>
           </ul>
           <nav className="rightBtn">
-            <button type="submit" className="redButton">Save</button>
-            <button type="submit" className="redButton">Save To</button>
+          <button className="redButton" onClick={handleSubmit}>Save</button>
+          <button className="redButton" onClick={handleSubmit}>Save To</button>
           </nav>
         </nav>
       <hr className="redSolid"></hr>
@@ -156,9 +157,8 @@ function StoryArc() {
           />
         </div>
       </div>
-      <button className="arc-submit" onClick={handleSubmit}>
-        Submit
-      </button>
+
+    </div>
     </div>
   );
 }

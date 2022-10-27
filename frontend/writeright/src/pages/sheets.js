@@ -33,19 +33,19 @@ function Sheets() {
             </li>
         </ul>
           </nav>
-        <hr></hr>
+          <hr class="redSolid"></hr>
         <div className="parentS">
             <a href="/sheets/blank-sheet">
-              <button className="projectMP">+ New Blank Sheet</button>
+              <button className="newSheet">+ New Blank Sheet</button>
             </a>
             <a href="/sheets/story-arc">
-              <button className="projectMP">+ New Eight Point Story Arc</button>
+              <button className="newSheet">+ New Eight Point Story Arc</button>
             </a>
             <a href="/sheets/character-log">
-              <button className="projectMP">+ New Character Log</button>
+              <button className="newSheet">+ New Character Log</button>
             </a>
             <a href="/sheets/at-home-with-your-character">
-              <button className="projectMP">+ New At Home With Your Character</button>
+              <button className="newSheet">+ New At Home With Your Character</button>
             </a>
         </div>
 

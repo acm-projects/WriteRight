@@ -26,7 +26,7 @@ function MyProjects() {
           </ul>
             <button className="submit-btnNB">log out</button>
         </nav>
-        <br></br> <br></br>
+        <br></br> <br></br> <br></br> <br></br>
         <div className="parentMP">
             <button className="projectMP">+ New Project</button>
             <button className="projectMP">All Projects</button>
