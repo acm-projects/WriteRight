@@ -3,9 +3,13 @@ import "../../everything.css";
 import logo from "../../images/logo.png";
 import { useState } from "react";
 import axios from "axios";
+import { useLoginStore } from "../../stores/LoginStore";
 import { useNavigate } from "react-router-dom";
 
 function LoginForm() {
+  const login = useLoginStore((state) => state.login);
+  const signIn = useLoginStore((state) => state.signIn);
+
   const navigate = useNavigate();
   const goSign = () => {
     navigate("/sign-up");
@@ -14,17 +18,15 @@ function LoginForm() {
   const [loginData, setLoginData] = useState({
     username: "",
     password: "",
-    buttonDisabled: false,
   });
 
-  let { username, password, buttonDisabled } = loginData;
+  let { username, password } = loginData;
 
   //When field in form is changed, variables are updated to take in whatever is in the field
   const onChange = (e) => {
     setLoginData((prevState) => ({
-      [e.target.username]: e.target.value,
-      [e.target.password]: e.target.value,
-      [e.target.buttonDisabled]: e.target.value,
+      ...prevState,
+      [e.target.id]: e.target.value,
     }));
   };
 
@@ -33,15 +35,28 @@ function LoginForm() {
     //Prevents blank form from being submitted, which would be bad for the DB
     e.preventDefault();
 
-    const userData = {
+    const loginData = {
       username,
       password,
-      buttonDisabled,
     };
 
-    //Replace with URL that will be used to send post request to the DB
-    const postUrl = "";
-    //Below here write out post request
+    const postUrl = "http://localhost:1337/users/login";
+
+    axios
+      .post(postUrl, loginData)
+      .then(function (response) {
+        console.log(response);
+        signIn();
+        alert("User logged in successfully");
+        console.log(`The user is now logged in: ${login}`);
+      })
+      .catch(function (error) {
+        console.log(error);
+        alert(
+          "Error logging in, please check console for a detailed error report"
+        );
+        console.log(`The user is NOT logged in: ${login}`);
+      });
 
     //After post request clear form data, set up redirect to new page after user signs up
   };
@@ -50,33 +65,37 @@ function LoginForm() {
     <div className="outer">
       <div className="center-boxLI">
         <img src={logo} className="logoLI" alt="WriteRight" />
-        <div className="form-groupLI">
-          <input
-            required
-            type="text"
-            className="form-fieldLI"
-            name="username"
-            id="username"
-            defaultvalue={username}
-            placeholder="  username"
-          />
-        </div>
-        <div className="form-groupLI">
-          <input
-            required
-            type="password"
-            className="form-fieldLI"
-            name="password"
-            id="password"
-            defaultvalue={password}
-            placeholder="  password"
-          />
-        </div>
-        <div className="form-groupLI">
-          <button type="submit" className="submit-btnLI">
-            log in
-          </button>
-        </div>
+        <form onSubmit={handleSubmit}>
+          <div className="form-groupLI">
+            <input
+              required
+              type="text"
+              className="form-fieldLI"
+              name="username"
+              id="username"
+              onChange={onChange}
+              defaultvalue={username}
+              placeholder="  username"
+            />
+          </div>
+          <div className="form-groupLI">
+            <input
+              required
+              type="password"
+              className="form-fieldLI"
+              name="password"
+              id="password"
+              onChange={onChange}
+              defaultvalue={password}
+              placeholder="  password"
+            />
+          </div>
+          <div className="form-groupLI">
+            <button type="submit" className="submit-btnLI">
+              log in
+            </button>
+          </div>
+        </form>
       </div>
       <div className="signup-box">
         <p>
