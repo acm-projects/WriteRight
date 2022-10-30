@@ -4,13 +4,16 @@ import LandingPage from "./pages/landing/LandingPage";
 import LoginForm from "./pages/login/LoginForm";
 import StoryArc from "./pages/storyarc/StoryArc";
 import Grammar from "./pages/grammar/Grammar";
-import LoggedIn from "./pages/LoggedIn";
 import BlankSheet from "./pages/blankSheet";
 import CharacterLog from "./pages/characterLog";
 import AtHome from "./pages/atHome";
+import LoggedIn from "./pages/LoggedIn";
+import { useLoginStore } from "./stores/LoginStore";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
+  const getLogin = useLoginStore((state) => state.login);
+
   return (
     <div className="App">
       <Router>
