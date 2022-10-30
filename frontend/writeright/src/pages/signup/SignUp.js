@@ -25,11 +25,8 @@ function SignUp() {
   //When field in form is changed, variables are updated to take in whatever is in the field
   const onChange = (e) => {
     setFormData((prevState) => ({
-      [e.target.fName]: e.target.value,
-      [e.target.lName]: e.target.value,
-      [e.target.email]: e.target.value,
-      [e.target.username]: e.target.value,
-      [e.target.password]: e.target.value,
+      ...prevState,
+      [e.target.id]: e.target.value,
     }));
   };
 
@@ -37,6 +34,8 @@ function SignUp() {
   const handleSubmit = (e) => {
     //Prevents blank form from being submitted, which would be bad for the DB
     e.preventDefault();
+
+    const postUrl = "http://localhost:1337/users/register";
 
     const userData = {
       fName,
@@ -46,11 +45,25 @@ function SignUp() {
       password,
     };
 
-    //Replace with URL that will be used to send post request to the DB
-    const postUrl = "";
-    //Below here write out post request
-
     //After post request clear form data, set up redirect to new page after user signs up
+    axios
+      .post(postUrl, userData)
+      .then(function (response) {
+        console.log(response);
+        alert("User has successfully registered!");
+      })
+      .catch(function (error) {
+        console.log(error);
+        alert("Error, please check console and try again later");
+      });
+
+    /* setFormData({
+      fName: "",
+      lName: "",
+      email: "",
+      username: "",
+      password: "",
+    });*/
   };
 
   return (

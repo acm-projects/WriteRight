@@ -11,22 +11,23 @@ export default function LandingPage() {
   };
 
   return (
-    <div>
+    <div className="landing-outer-div">
       <LandingNav />
-      <div className="landing-section">
-        <div className="content">
-          <div className="main-info">
-            Discover a new way to maximize your creative writing potential
+      <div className="landing-section-main">
+        <div className="content-main">
+          <div className="main-info-1">
+            WriteRight is a better way to bring your stories to life
           </div>
-          <div className="supporting-info">
-            WriteRight helps you organize your thoughts, generate new ideas, and
-            makes it easy to bring your stories with life!
+          <div className="supporting-info-main">
+            Meet the new tool designed to streamline the writing process.
+            <br></br>
+            Generate and organize ideas, revise content, write stories,<br></br>{" "}
+            and more all in the same place!
           </div>
-          <button className="landing-sign-btn" onClick={handleSignUp}>
+          <button className="landing-sign-btn-main" onClick={handleSignUp}>
             Get Started!
           </button>
         </div>
-        <div className="img-box"></div>
       </div>
 
       <div className="landing-section">
@@ -38,9 +39,6 @@ export default function LandingPage() {
             Use our planning tools to reduce time spent creating and organizing
             new ideas and focus valuable time on producing high quality stories
           </div>
-          <button className="landing-sign-btn" onClick={handleSignUp}>
-            Get Started!
-          </button>
         </div>
         <div className="img-box"></div>
       </div>
@@ -55,9 +53,6 @@ export default function LandingPage() {
             where you left off, or save it for later and start working on
             something new
           </div>
-          <button className="landing-sign-btn" onClick={handleSignUp}>
-            Get Started!
-          </button>
         </div>
         <div className="img-box"></div>
       </div>
@@ -72,9 +67,6 @@ export default function LandingPage() {
             utilize our writing tools to ensure that your stories are the best
             that they can possibly be
           </div>
-          <button className="landing-sign-btn" onClick={handleSignUp}>
-            Get Started!
-          </button>
         </div>
         <div className="img-box"></div>
       </div>

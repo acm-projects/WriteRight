@@ -1,12 +1,15 @@
 .nav {
-  height: 130px;
+  height: 88px;
   width: 100%;
-  background-color: #273660;
-  color: white;
-  font-weight: 600;
+  background-image: url(../../images/LoginBox.png);
+  background-size: cover;
+  background-position: relative;
+  border-bottom: 2px solid black;
+  color: black;
+  position: fixed;
+  top: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .land-logo {
@@ -17,7 +20,9 @@
 
 .nav-options {
   display: flex;
+  width: 100%;
   flex-direction: row;
+  font-weight: 700;
   align-items: center;
   justify-content: space-between;
 }
@@ -25,11 +30,27 @@
 .nav-option {
   margin: 15px;
   font-size: 26px;
+  font-weight: 700;
 }
 
 .login-btn {
   font-size: 22px;
-  background-color: white;
+  background-color: transparent;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 50px;
+  font-weight: 700;
+  width: 110px;
+  border-radius: 20px;
+  border: none;
+}
+
+.sign-btn {
+  font-size: 22px;
+  background-color: black;
   color: #273660;
   display: flex;
   justify-content: center;
@@ -40,21 +61,13 @@
   width: 110px;
   border-radius: 20px;
   border: none;
+  font-weight: 700;
 }
 
-.sign-btn {
-  font-size: 22px;
-  background-color: white;
-  color: #273660;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 50px;
-  font-weight: 600;
-  width: 170px;
-  border-radius: 20px;
-  border: none;
+#landnav-sign-txt {
+  font-size: inherit;
+  font-weight: inherit;
+  color: #f3f0bf;
 }
 
 .nav-option:hover {
@@ -65,4 +78,21 @@
 .nav button:hover {
   cursor: pointer;
   scale: 1.03;
+}
+
+.nav-opt-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.land-nav-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.landing-left-nav {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
 }
