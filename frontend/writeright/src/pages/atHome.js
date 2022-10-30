@@ -100,13 +100,10 @@ function AtHome() {
               <p className="sNavRed"> &gt; </p>
             </li>
             <li class="a">
-              <a className="sNavRed" href="/sheets/character-log">Character Log</a>
+              <a className="sNavRed" href="/sheets/at-home-with-your-character">At Home with Your Character</a>
             </li>
             <li class="a">
-              <p className="sNavRed"> &gt; </p>
-            </li>
-            <li class="a">
-              <input className="form-fieldtitleSN" placeholder="Sheet Title"></input>
+              <input className="form-fieldtitleSN" placeholder="Title"></input>
             </li>
           </ul>
           <nav className="rightBtn">

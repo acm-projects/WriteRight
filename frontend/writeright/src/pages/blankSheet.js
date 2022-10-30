@@ -64,13 +64,10 @@ function BlankSheet() {
               <p className="sNavRed"> &gt; </p>
             </li>
             <li class="a">
-              <a className="sNavRed" href="/sheets/character-log">Character Log</a>
+              <a className="sNavRed" href="/sheets/blank-sheet">Blank Sheet</a>
             </li>
             <li class="a">
-              <p className="sNavRed"> &gt; </p>
-            </li>
-            <li class="a">
-              <input className="form-fieldtitleSN" placeholder="Sheet Title"></input>
+              <input className="form-fieldtitleSN" placeholder="Title"></input>
             </li>
           </ul>
           <nav className="rightBtn">
