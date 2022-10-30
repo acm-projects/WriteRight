@@ -7,7 +7,7 @@ import axios from "axios";
 function CharacterLog() {
   //Hook to store form data and submit it as a single object
   const [characterLogData, setCharacterLogData] = useState({
-    story: "",
+    titleCL: "",
     sec1: "",
     chara1: "",
     detail1: "",
@@ -50,7 +50,7 @@ function CharacterLog() {
     seen10: ""
   });
 
-  let { story, sec1, chara1, detail1, seen1, sec2, chara2, detail2,
+  let { titleCL, sec1, chara1, detail1, seen1, sec2, chara2, detail2,
     seen2, sec3, chara3, detail3, seen3, sec4, chara4, detail4, seen4,
     sec5, chara5, detail5, seen5, sec6, chara6, detail6, seen6, sec7,
     chara7, detail7, seen7, sec8, chara8, detail8, seen8, sec9, chara9,
@@ -59,7 +59,7 @@ function CharacterLog() {
   //When field in form is changed, variables are updated to take in whatever is in the field
   const onChange = (e) => {
     setCharacterLogData((prevState) => ({
-      [e.target.story]: e.target.value,
+      [e.target.titleCL]: e.target.value,
       [e.target.sec1]: e.target.value,
       [e.target.chara1]: e.target.value,
       [e.target.detail1]: e.target.value,
@@ -109,7 +109,7 @@ function CharacterLog() {
     e.preventDefault();
 
     const userData = {
-        story, sec1, chara1, detail1, seen1, sec2, chara2, detail2,
+        titleCL, sec1, chara1, detail1, seen1, sec2, chara2, detail2,
         seen2, sec3, chara3, detail3, seen3, sec4, chara4, detail4, seen4,
         sec5, chara5, detail5, seen5, sec6, chara6, detail6, seen6, sec7,
         chara7, detail7, seen7, sec8, chara8, detail8, seen8, sec9, chara9,
@@ -160,14 +160,7 @@ function CharacterLog() {
               <p className="sNavRed"> &gt; </p>
             </li>
             <li class="a">
-              <input
-                    required
-                    type="story"
-                    className="form-fieldCLstory"                   
-                    name="story"
-                    id="story"
-                    defaultvalue={story}
-                    placeholder="Story Title"></input>
+              <input className="form-fieldtitleSN" placeholder="Sheet Title"></input>
             </li>
           </ul>
           <nav className="rightBtn">

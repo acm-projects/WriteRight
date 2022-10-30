@@ -7,6 +7,7 @@ import { useState } from "react";
 function StoryArc() {
   //UseState with variables that will be sent to database
   const [storyData, setStoryData] = useState({
+    titleSA:"",
     stasis: "",
     trigger: "",
     quest: "",
@@ -59,12 +60,18 @@ function StoryArc() {
               <p className="sNavRed"> &gt; </p>
             </li>
             <li class="a">
-              <a className="sNavRed" href="/sheets/story-arc">Eight Point Story Arc</a>
+              <a className="sNavRed" href="/sheets/character-log">Character Log</a>
+            </li>
+            <li class="a">
+              <p className="sNavRed"> &gt; </p>
+            </li>
+            <li class="a">
+              <input className="form-fieldtitleSN" placeholder="Sheet Title"></input>
             </li>
           </ul>
           <nav className="rightBtn">
-          <button className="redButton" onClick={handleSubmit}>Save</button>
-          <button className="redButton" onClick={handleSubmit}>Save To</button>
+            <button type="submit" className="redButton">Save</button>
+            <button type="submit" className="redButton">Save To</button>
           </nav>
         </nav>
       <hr className="redSolid"></hr>

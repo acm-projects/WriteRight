@@ -11,7 +11,8 @@ import Grammar from "./pages/grammar/Grammar";
 import LandingPage from "./pages/landingpage/LandingPage";
 import Sheets from "./pages/sheets";
 import MyProjects from "./pages/myProjects";
-import MyProjectsFolder from "./pages/myProjectsFolder";
+import Project from "./pages/Project";
+import UserSheet from "./pages/userSheet";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -33,7 +34,8 @@ function App() {
           <Route path="/grammar-checker" element={<Grammar />} />
           <Route path="/sheets" element={<Sheets />} />
           <Route path="/my-projects" element={<MyProjects />} />
-          <Route path="/my-projects/Project-1" element={<MyProjectsFolder />} />
+          <Route path="/my-projects/project" element={<Project />} />
+          <Route path="/my-projects/project/sheet" element={<UserSheet />} />
         </Routes>
       </Router>
     </div>

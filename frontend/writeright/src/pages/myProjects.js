@@ -1,6 +1,9 @@
 //Import CSS sheet from same folder
 import "../everything.css";
 import logo from '../images/writerightTitle.png';
+import ProjectButton from '../components/ProjectButton';
+import NewProjectButton from '../components/newProjectBtn';
+
 
 
 function MyProjects() {
@@ -28,11 +31,15 @@ function MyProjects() {
         </nav>
         <br></br> <br></br> <br></br> <br></br>
         <div className="parentMP">
-            <button className="projectMP">+ New Project</button>
-            <button className="projectMP">All Projects</button>
-            <button className="projectMP">Unfiled Sheets</button>
-            <button className="projectMP">Project 1</button>
-            <button className="projectMP">Project 2</button>
+              <NewProjectButton text='+ New Project'/>
+            <a href='/my-projects/project'>
+              <button className="projectMP" id='AllSheets'>All Projects</button>
+            </a>
+            <a href='/my-projects/project'>
+              <button className="projectMP" id='UnfiledSheets'>Unfiled Sheets</button>
+            </a>
+              <ProjectButton text='Project 1'/>
+              <ProjectButton text='Project 2'/>
         </div>
 
 

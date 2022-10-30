@@ -265,11 +265,22 @@ nav.sub{
   color: #8e210c;
   margin-left: 1rem;
 }
+.sNavBlack{
+	display: inline;
+	color: #000;
+	margin-left: 1rem;
+  }
 hr.redSolid {
 	margin-top: 0.4rem;
 	margin-left: 2rem;
 	margin-right: 2rem;
 	border-top: 1px solid #8e210c;
+}
+hr.blackSolid {
+	margin-top: 0.4rem;
+	margin-left: 2rem;
+	margin-right: 2rem;
+	border-top: 1px solid #000;
 }
 .redButton{
 	border: none;
@@ -386,7 +397,7 @@ ul.b{
 	font-weight: bold;
 	color: #8E210C;
   }
-  .form-fieldCLstory{
+  .form-fieldtitleSN{
 	border: 1px solid #dbc7c3;
 	border-radius: 20px;
 	padding: 2%;
@@ -503,13 +514,13 @@ ul.b{
 	display: block;
 	width: 60%;
 	justify-content: space-between;
-	text-align: center;
+	text-align: left;
   }
   .projectMP{
 	width: 17rem;
 	vertical-align: middle;
 	height: 6rem;
-	background-color: #fff;
+	background-color: #D6BF91;
 	color: #000;
 	font-weight: bold;
 	font-size: larger;
@@ -520,6 +531,60 @@ ul.b{
 	border-radius: 15px;
 	margin-bottom: 1rem;
   }
+  #NewProject{
+	background-color: #3F4C71;
+	color: #fff;
+  }
+  #AllSheets{
+	background-color: #9E402E;
+	color: #fff;
+  }
+  #UnfiledSheets{
+	background-color: #9E402E;
+	color: #fff;
+  }
+
+  /*PROJECT (like within the folder)*/
+  .newSheetBtn{
+	color: #273660;
+	font-weight: bold;
+	background-color: #F2EEE4;
+	border-radius: 20px;
+	border: none;
+	padding-top: 0.7%;
+	padding-bottom: 0.7%;
+	padding-left: 3.6%;
+	padding-right: 3.6%;
+	margin-top: 0.4rem;
+	margin-left: 2rem;
+	box-shadow: 5px 5px 10px #d1cdc7;
+  }
+  .parentSP{
+	margin: auto;
+	display: block;
+	width: 58.5%;
+	justify-content: space-between;
+	text-align: left;
+  }
+  .childSP{
+	width: 17rem;
+	vertical-align: middle;
+	height: 9.4rem;
+	/*background: url('./images/LoginBox.png') no-repeat top left;*/
+	background-color: transparent;
+	font-weight: bold;
+	font-size: larger;
+	box-shadow: 5px 5px 10px #d1cdc7;
+	border: none;
+	margin: 0.6rem;
+	border-radius: 15px;
+	margin-bottom: 2.5rem;
+  }
+  .imgSP{
+	width: 100%;
+	height: auto;
+  }
+
 
   /*SHEETS*/
   .parentS{
@@ -573,6 +638,12 @@ ul.b{
 }
 .bgRainbowWhite {
 	background-image: url('./images/rainbowWhiteBG.png');
+	background-size: cover;
+	background-repeat: repeat;
+	height: 100vh;
+}
+.bgRainbowGray {
+	background-image: url('./images/rainbowGrayBG.png');
 	background-size: cover;
 	background-repeat: repeat;
 	height: 100vh;
