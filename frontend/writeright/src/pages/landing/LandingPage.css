@@ -5,6 +5,32 @@
   align-items: center;
   justify-content: space-between;
   margin: 20px;
+  width: 90%;
+  margin-top: 0px;
+  background: transparent;
+  background-color: transparent;
+}
+
+.landing-section-main {
+  margin-top: 88px;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0px;
+  width: 90%;
+  background: transparent;
+  background-color: transparent;
+}
+
+.landing-outer-div {
+  display: flex;
+  background-image: url(../../images/LoginBox.png);
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
@@ -33,6 +59,14 @@
   font-weight: 500;
 }
 
+.supporting-info-main {
+  margin-top: 35px;
+  width: 90%;
+  color: black;
+  font-size: 32px;
+  font-weight: 600;
+}
+
 .landing-sign-btn {
   font-size: 22px;
   background-color: #273660;
@@ -49,8 +83,59 @@
   margin-top: 25px;
 }
 
+.landing-sign-btn-main {
+  font-size: 22px;
+  background-color: black;
+  color: #fce8b8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 57px;
+  font-weight: 600;
+  width: 181px;
+  border-radius: 20px;
+  border: none;
+  margin-top: 45px;
+}
+
+.landing-sign-btn-main:hover {
+  scale: 1.03;
+  cursor: pointer;
+  box-shadow: rgb(0 0 0 / 50%) 0px 1px 40px;
+  filter: brightness(110%);
+}
+
 .landing-sign-btn:hover {
   background-color: #1e2a4b;
   scale: 1.03;
   cursor: pointer;
+}
+
+.content-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  height: 100%;
+}
+
+.main-info-1 {
+  color: black;
+  font-weight: 800;
+  font-size: 80px;
+  text-align: center;
+}
+
+#gradient-transparent {
+  font-size: inherit;
+  font-weight: inherit;
+  color: transparent;
+  background-image: url(../../images/LoginBox.png);
+  background-size: contain;
+  background-clip: text;
+  color: white;
 }
