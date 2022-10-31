@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Grammar.css";
 import Nav from "../../components/nav/Nav";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useLoginStore } from "../../stores/LoginStore";
 
 function Grammar() {
+  const getLogin = useLoginStore((state) => state.login);
+  const navigate = useNavigate();
+
   const [story, setStory] = useState("");
   const [count, setCount] = useState(0);
   const handleChange = (e) => {
@@ -30,6 +35,13 @@ function Grammar() {
 
     setStory("");
   };
+
+  useEffect(() => {
+    if (getLogin == false) {
+      alert(`You must sign in before accessing WriteRight's tools!`);
+      navigate("/");
+    }
+  }, [getLogin]);
 
   return (
     <div className="grammar-outer">

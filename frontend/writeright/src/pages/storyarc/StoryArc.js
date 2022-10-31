@@ -1,11 +1,23 @@
 import React from "react";
 import "./StoryArc.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../../everything.css";
 import Nav from "../../components/nav/Nav";
 import SubNav from "../../components/subnav/SubNav";
+import { useNavigate } from "react-router-dom";
+import { useLoginStore } from "../../stores/LoginStore";
 
 function StoryArc() {
+  const getLogin = useLoginStore((state) => state.login);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (getLogin == false) {
+      alert(`You must sign in before accessing WriteRight's tools!`);
+      navigate("/");
+    }
+  }, [getLogin]);
+
   //UseState with variables that will be sent to database
   const [storyData, setStoryData] = useState({
     stasis: "",

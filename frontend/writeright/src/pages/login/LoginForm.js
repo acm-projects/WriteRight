@@ -48,14 +48,12 @@ function LoginForm() {
         console.log(response);
         signIn();
         alert("User logged in successfully");
-        console.log(`The user is now logged in: ${login}`);
       })
       .catch(function (error) {
         console.log(error);
         alert(
           "Error logging in, please check console for a detailed error report"
         );
-        console.log(`The user is NOT logged in: ${login}`);
       });
 
     //After post request clear form data, set up redirect to new page after user signs up
