@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const getLogin = useLoginStore((state) => state.login);
+  console.log(getLogin);
 
   return (
     <div className="App">
