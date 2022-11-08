@@ -11,12 +11,13 @@ function StoryArc() {
   const getLogin = useLoginStore((state) => state.login);
   const navigate = useNavigate();
 
+  /*
   useEffect(() => {
     if (getLogin == false) {
       alert(`You must sign in before accessing WriteRight's tools!`);
       navigate("/");
     }
-  }, [getLogin]);
+  }, [getLogin]);*/
 
   //UseState with variables that will be sent to database
   const [storyData, setStoryData] = useState({

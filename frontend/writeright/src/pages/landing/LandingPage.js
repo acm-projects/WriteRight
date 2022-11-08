@@ -22,7 +22,7 @@ export default function LandingPage() {
             Meet the new tool designed to streamline the writing process.
             <br></br>
             Generate and organize ideas, revise content, write stories,<br></br>{" "}
-            and more all in the same place!
+            and more all in one place!
           </div>
           <button className="landing-sign-btn-main" onClick={handleSignUp}>
             Get Started!
@@ -30,14 +30,27 @@ export default function LandingPage() {
         </div>
       </div>
 
+      <div className="landing-section-2">
+        <div className="img-box-2"></div>
+        <div className="content-2">
+          <div className="main-info-2">
+            Writer's block is a thing of the past
+          </div>
+          <div className="supporting-info-2">
+            WriteRight offers numerous planning pages to help creatives
+            efficiently organize their thoughts so that they can focus on what
+            matters most, writing!
+          </div>
+        </div>
+      </div>
+
       <div className="landing-section">
         <div className="content">
-          <div className="main-info">
-            Simplify the process of bringing your ideas to life
-          </div>
+          <div className="main-info">Don't have any ideas to organize?</div>
           <div className="supporting-info">
-            Use our planning tools to reduce time spent creating and organizing
-            new ideas and focus valuable time on producing high quality stories
+            That's ok too! You can start writing within our app and generate
+            them as you go, or you can also refer to our curated list of
+            articles that were handpicked to help writers of all skill levels!
           </div>
         </div>
         <div className="img-box"></div>
