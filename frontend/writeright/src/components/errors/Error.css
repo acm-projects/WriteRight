@@ -1,0 +1,42 @@
+.errors-outer {
+  margin: 15px;
+  width: 70%;
+}
+
+.error-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.err-sections {
+  border: 3px solid #caad73;
+  border-radius: 20px;
+  width: 100%;
+  padding: 5px;
+  background-color: white;
+}
+
+.replacements {
+  display: flex;
+  flex-direction: row;
+}
+
+.replacement-opt {
+  margin-right: 15px;
+}
+
+.err-num {
+  margin-bottom: 5px;
+}
+
+.error-section {
+  display: flex;
+  flex-direction: row;
+  margin: 3px;
+}
+
+.err-label {
+  margin-right: 5px;
+}

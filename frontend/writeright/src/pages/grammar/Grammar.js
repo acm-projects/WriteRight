@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Grammar.css";
+import Error from "../../components/errors/Error";
 import Nav from "../../components/nav/Nav";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -8,40 +9,44 @@ import { useLoginStore } from "../../stores/LoginStore";
 function Grammar() {
   const getLogin = useLoginStore((state) => state.login);
   const navigate = useNavigate();
+  const [grammarErrors, setGrammarErrors] = useState([]);
+  const [resReceived, setResReceived] = useState(false);
 
   const [story, setStory] = useState("");
   const [count, setCount] = useState(0);
   const handleChange = (e) => {
     setStory(e.target.value);
     setCount(e.target.value.length);
-    console.log(story);
   };
 
   //Function to send request to API
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const postUrl = "";
+    const postUrl = "http://localhost:8080/grammar";
 
     axios
-      .post(postUrl, story)
+      .post(postUrl, { story })
       .then(function (response) {
         console.log(response);
+        console.log(response.data.matches);
+        alert("Grammar has been checked!");
+        setGrammarErrors(response.data.matches);
+        setResReceived(true);
       })
       .catch(function (error) {
         console.log(error);
-        alert("Error, please try again!");
+        alert("Error, grammar hasn't been checked. Please check console!");
       });
-
-    setStory("");
   };
 
+  /*
   useEffect(() => {
     if (getLogin == false) {
       alert(`You must sign in before accessing WriteRight's tools!`);
       navigate("/");
     }
-  }, [getLogin]);
+  }, [getLogin]);*/
 
   return (
     <div className="grammar-outer">
@@ -65,10 +70,35 @@ function Grammar() {
           <textarea
             className="grammar-box"
             value={story}
+            maxLength="10000"
             onChange={handleChange}
             placeholder="Import an existing story, or copy and paste one here and then click the button to check your grammar!  (Max Limit: 10,000 Characters)"
           />
-          <button className="grammar-submit-btn">Submit</button>
+          <button onClick={handleSubmit} className="grammar-submit-btn">
+            Submit
+          </button>
+        </div>
+      </div>
+      <div className="grammar">
+        <div className="all-error-body">
+          <h2 className="error-main-title">
+            Errors Detected: {grammarErrors.length}
+          </h2>
+          <div className="individual-errors">
+            {grammarErrors.map((error, index) => (
+              <Error
+                key={index}
+                errNum={index + 1}
+                context={error.context}
+                message={error.message}
+                replacements={error.replacements}
+                rule={error.rule}
+                shortMessage={error.shortMessage}
+                length={error.length}
+                offset={error.offset}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
