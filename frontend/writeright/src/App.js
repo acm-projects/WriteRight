@@ -8,6 +8,7 @@ import BlankSheet from "./pages/blankSheet";
 import CharacterLog from "./pages/characterLog";
 import AtHome from "./pages/atHome";
 import LoggedIn from "./pages/LoggedIn";
+import WritingTips from "./pages/writingTips";
 import { useLoginStore } from "./stores/LoginStore";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -34,6 +35,7 @@ function App() {
             path="/sheets/at-home-with-your-character"
             element={<AtHome />}
           />
+          <Route path="/sheets/writing-tips" element={<WritingTips />} />
         </Routes>
       </Router>
     </div>
