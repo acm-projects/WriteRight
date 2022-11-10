@@ -1,5 +1,6 @@
 import "./App.css";
 import SignUp from "./pages/signup/SignUp";
+import SignUp2 from "./pages/signup/SignUp2";
 import LandingPage from "./pages/landing/LandingPage";
 import LoginForm from "./pages/login/LoginForm";
 import StoryArc from "./pages/storyarc/StoryArc";
@@ -36,6 +37,7 @@ function App() {
             element={<AtHome />}
           />
           <Route path="/sheets/writing-tips" element={<WritingTips />} />
+          <Route path="/sign-two" element={<SignUp2 />} />
         </Routes>
       </Router>
     </div>

@@ -1,0 +1,113 @@
+.su2-outer {
+  display: flex;
+  background-image: url(../../images/LoginBox.png);
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.su2-white {
+  background-color: white;
+  border-radius: 20px;
+  height: 88%;
+  width: 88%;
+  display: flex;
+  flex-direction: row;
+}
+
+.su2-logo {
+  width: 300px;
+  height: 80px;
+  margin-top: 30px;
+  margin-left: -10px;
+}
+
+.su-form-half {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.su-color-half {
+  width: 50%;
+  background-image: url("../../images/rainbowWhiteBG.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.su2-form {
+  margin-left: 20px;
+  margin-top: -20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.su2-form-group {
+  margin: 15px;
+  margin-left: 0;
+}
+
+.su2-form-field {
+  margin-top: 7px;
+  border-bottom: 2px solid black;
+  width: 80%;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.su-2main-text {
+  font-weight: bold;
+  font-size: 42px;
+}
+
+.su2-form-group-btn {
+  margin-left: 20%;
+}
+
+.submit-btnSU2 {
+  font-size: 22px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 40px;
+  font-weight: 600;
+  margin-top: 50px;
+  width: 220px;
+  border-radius: 10px;
+  border: none;
+}
+
+.submit-btnSU2:hover {
+  scale: 1.03;
+  cursor: pointer;
+  box-shadow: rgb(0 0 0 / 50%) 0px 1px 30px;
+  filter: brightness(110%);
+}
+
+.su-sign-hyperlink {
+  font-style: italic;
+  font-weight: 500;
+  color: inherit;
+  font-size: 20px;
+}
+
+.su-sign-hyperlink:hover {
+  color: black;
+}
+
+.su-sub-text {
+  font-size: 20px;
+  color: #848484;
+  font-weight: 500;
+}

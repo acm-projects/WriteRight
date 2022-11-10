@@ -78,6 +78,7 @@ function AtHome() {
   const handleSubmit = (e) => {
     //Prevents blank form from being submitted, which would be bad for the DB
     e.preventDefault();
+    console.log(atHomeData);
 
     const userData = {
       mc1,
