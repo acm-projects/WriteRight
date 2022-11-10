@@ -25,7 +25,7 @@ router.get('/:username', getUserProjects, (req, res) => {
 })
 
 //Updating an existing project
-router.patch('/update/:id', getSingleProject, async (req, res) => {
+/*router.patch('/update/:id', getSingleProject, async (req, res) => {
     if(req.body.title != null) {
         res.project.title = req.body.title
     }
@@ -40,7 +40,23 @@ router.patch('/update/:id', getSingleProject, async (req, res) => {
     catch (err) {
         res.status(400).json({message: err.message})
     }
-})
+})*/
+
+router.patch('/update/:id', getSingleProject, async (req, res) => {
+    if(req.body.contents != null) {
+        res.project.contents.push(req.body.contents);
+        //res.project.contents.push("12345")
+    }
+    try {
+        const updatedProject = await res.project.save()
+        res.json(updatedProject)
+    }
+    catch (err) {
+        res.status(400).json({message: err.message})
+    }
+}) 
+
+
 
 async function getUserProjects(req, res, next) {
     let projectInput 
