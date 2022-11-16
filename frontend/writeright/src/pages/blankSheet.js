@@ -7,15 +7,18 @@ import axios from "axios";
 function BlankSheet() {
   //Hook to store form data and submit it as a single object
   const [blankSheet, setBlankSheet] = useState({
-    text: "",
+    content: "",
+    title: "",
+    sheetType: 0,
   });
 
-  let { text } = blankSheet;
+  let { content, title, sheetType } = blankSheet;
 
   //When field in form is changed, variables are updated to take in whatever is in the field
-  const onChange = (e) => {
+  const handleChange = (e) => {
     setBlankSheet((prevState) => ({
-      [e.target.text]: e.target.value,
+      ...prevState,
+      [e.target.id]: e.target.value,
     }));
   };
 
@@ -23,17 +26,21 @@ function BlankSheet() {
   const handleSubmit = (e) => {
     //Prevents blank form from being submitted, which would be bad for the DB
     e.preventDefault();
+    console.log(blankSheet);
 
-    const userData = {
-      text,
-    };
-
-    //Replace with URL that will be used to send post request to the DB
-    const postUrl = "";
-    //Below here write out post request
-
-    //After post request clear form data, set up redirect to new page after user signs up
+    const postUrl = "http://localhost:8080/blanksheets";
+    axios
+      .post(postUrl, blankSheet)
+      .then(function (response) {
+        alert("Successfully added Blank Sheet to database!");
+        console.log(response);
+      })
+      .catch(function (error) {
+        alert("Error, check console for information!");
+        console.log(error);
+      });
   };
+
   return (
     <body>
       <div className="bgRedGray">
@@ -70,12 +77,24 @@ function BlankSheet() {
                 New Blank Sheet
               </a>
             </li>
+            <li class="a">
+              <p className="sNavRed"> &gt; </p>
+            </li>
+            <li class="a">
+              <input
+                required
+                type="text"
+                className="form-fieldCLstory"
+                name="title"
+                id="title"
+                value={title}
+                onChange={handleChange}
+                placeholder="Sheet Name"
+              ></input>
+            </li>
           </ul>
           <nav className="rightBtn">
-            <button type="submit" className="redButton">
-              Save
-            </button>
-            <button type="submit" className="redButton">
+            <button type="submit" className="redButton" onClick={handleSubmit}>
               Save To
             </button>
           </nav>
@@ -115,10 +134,11 @@ function BlankSheet() {
                 required
                 type="text"
                 className="blankSheet"
-                name="text"
-                id="text"
-                defaultvalue={text}
-                placeholder="Start typing here . ."
+                name="content"
+                onChange={handleChange}
+                id="content"
+                value={content}
+                placeholder="Start typing here . . ."
               ></textarea>
             </form>
           </div>

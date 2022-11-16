@@ -2,15 +2,34 @@ import React from "react";
 import logo from "../../images/writerightTitle.png";
 //import "./Nav.css";
 import "../../everything.css";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useLoginStore } from "../../stores/LoginStore";
 
 function Nav() {
+  const getLogin = useLoginStore((state) => state.login);
+  const signOut = useLoginStore((state) => state.signOut);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    if (getLogin == false) {
+      alert(
+        `Error, user isn't currently signed in. Redirecting to home page...`
+      );
+      navigate("/");
+    } else {
+      signOut();
+      alert("You have successfully logged out!");
+      navigate("/");
+    }
+  };
+
   return (
     <nav className="main">
       <img src={logo} className="logoBS" alt="Logo" />
       <ul class="a">
         <li class="a" id="myprojects">
-          <a href="">My Projects</a>
+          <Link to="/projects">My Projects</Link>
         </li>
         <li class="a" id="sheets">
           <a href="">Sheets</a>
@@ -19,10 +38,12 @@ function Nav() {
           <Link to="/grammar">Grammar Checker</Link>
         </li>
         <li class="a" id="writingtips">
-          <a href="">Writing Tips</a>
+          <Link to="/sheets/writing-tips">Writing Tips</Link>
         </li>
       </ul>
-      <button className="submit-btnNB">log out</button>
+      <button className="submit-btnNB" onClick={handleLogout}>
+        log out
+      </button>
     </nav>
   );
 }

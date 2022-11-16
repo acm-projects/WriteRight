@@ -10,8 +10,10 @@ import CharacterLog from "./pages/characterLog";
 import AtHome from "./pages/atHome";
 import LoggedIn from "./pages/LoggedIn";
 import WritingTips from "./pages/writingTips";
+import MyProjects from "./pages/projects/MyProjects";
 import { useLoginStore } from "./stores/LoginStore";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SingleProject from "./pages/singleProject/SingleProject";
 
 function App() {
   const getLogin = useLoginStore((state) => state.login);
@@ -23,7 +25,7 @@ function App() {
         <Routes>
           {/*Conditionally Render these pages when user is NOT logged in*/}
           <Route path="/" element={<LandingPage />} />
-          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/signup2" element={<SignUp />} />
           <Route path="/login" element={<LoginForm />} />
           {/*When user is logged in, allow these pages to be accessed
           Will change routing when backend is developed*/}
@@ -37,7 +39,9 @@ function App() {
             element={<AtHome />}
           />
           <Route path="/sheets/writing-tips" element={<WritingTips />} />
-          <Route path="/sign-two" element={<SignUp2 />} />
+          <Route path="/sign-up" element={<SignUp2 />} />
+          <Route path="/projects" element={<MyProjects />} />
+          <Route path="/projects/:id" element={<SingleProject />} />
         </Routes>
       </Router>
     </div>
