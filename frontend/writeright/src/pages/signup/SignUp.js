@@ -35,7 +35,7 @@ function SignUp() {
     //Prevents blank form from being submitted, which would be bad for the DB
     e.preventDefault();
 
-    const postUrl = "http://localhost:1337/users/register";
+    const postUrl = "http://localhost:8080/users/register";
 
     const userData = {
       fName,

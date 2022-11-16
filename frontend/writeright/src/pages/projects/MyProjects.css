@@ -1,0 +1,30 @@
+#new-proj-btn {
+  width: 30%;
+  max-width: 300px;
+  height: 100px;
+  background: #3f4c71;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.my-projects {
+  border: 2px solid red;
+  margin-top: 10%;
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.proj-btn-text-white {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  margin-left: 5px;
+}

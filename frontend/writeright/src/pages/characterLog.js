@@ -145,6 +145,7 @@ function CharacterLog() {
   const handleSubmit = (e) => {
     //Prevents blank form from being submitted, which would be bad for the DB
     e.preventDefault();
+    console.log(characterLogData);
 
     const userData = {
       story,
@@ -250,9 +251,6 @@ function CharacterLog() {
               </li>
             </ul>
             <nav className="rightBtn">
-              <button type="submit" className="redButton">
-                Save
-              </button>
               <button type="submit" className="redButton">
                 Save To
               </button>

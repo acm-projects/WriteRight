@@ -9,6 +9,8 @@ import { useNavigate } from "react-router-dom";
 function LoginForm() {
   const login = useLoginStore((state) => state.login);
   const signIn = useLoginStore((state) => state.signIn);
+  const globalUsername = useLoginStore((state) => state.globalUsername);
+  const setGlobalUserName = useLoginStore((state) => state.setGlobalUserName);
 
   const navigate = useNavigate();
   const goSign = () => {
@@ -40,14 +42,16 @@ function LoginForm() {
       password,
     };
 
-    const postUrl = "http://localhost:1337/users/login";
+    const postUrl = "http://localhost:8080/users/login";
 
     axios
       .post(postUrl, loginData)
       .then(function (response) {
-        console.log(response);
         signIn();
+        setGlobalUserName(loginData.username);
+        console.log(`The username is ${globalUsername}`);
         alert("User logged in successfully");
+        navigate(`/projects`);
       })
       .catch(function (error) {
         console.log(error);
