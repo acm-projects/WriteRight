@@ -6,4 +6,6 @@ export const useLoginStore = create((set) => ({
   signOut: () => set((state) => ({ login: false })),
   globalUsername: "",
   setGlobalUserName: (globalUsername) => set({ globalUsername }),
+  parentProject: "",
+  setParentProject: (parentProject) => set({ parentProject }),
 }));

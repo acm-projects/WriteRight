@@ -34,7 +34,7 @@ function ProjectForm({ setShowForm }) {
       .then(function (response) {
         alert("Successfully created new project!");
         setShowForm(false);
-        navigate("/projects");
+        navigate(`/projects/${projectData.title}`);
       })
       .catch(function (error) {
         alert("Error, check console!");
