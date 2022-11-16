@@ -10,6 +10,8 @@ import ProjectButton from "../../components/projectButton/ProjectButton";
 
 function MyProjects() {
   const globalUsername = useLoginStore((state) => state.globalUsername);
+  const parentProject = useLoginStore((state) => state.parentProject);
+  const setParentProject = useLoginStore((state) => state.setParentProject);
   const [showForm, setShowForm] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [userProjs, setUserProjs] = useState();
@@ -34,7 +36,7 @@ function MyProjects() {
         console.log(error);
         alert("Error fetching projects, please check console and try again!");
       });
-  }, [userProjs]);
+  }, []);
 
   if (isLoading) {
     return (
@@ -54,7 +56,7 @@ function MyProjects() {
         {showForm && <ProjectForm setShowForm={setShowForm} />}
         {userProjs.map((project) => (
           <div className="project-btn" key={project._id}>
-            <ProjectButton name={project.title} />
+            <ProjectButton key={project._id} name={project.title} />
           </div>
         ))}
       </div>
