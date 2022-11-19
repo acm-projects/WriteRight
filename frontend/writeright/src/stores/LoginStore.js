@@ -8,4 +8,6 @@ export const useLoginStore = create((set) => ({
   setGlobalUserName: (globalUsername) => set({ globalUsername }),
   parentProject: "",
   setParentProject: (parentProject) => set({ parentProject }),
+  checkText: "",
+  setCheckText: (checkText) => set({ checkText }),
 }));

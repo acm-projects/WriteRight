@@ -9,11 +9,13 @@ import { useLoginStore } from "../../stores/LoginStore";
 function Grammar() {
   const getLogin = useLoginStore((state) => state.login);
   const navigate = useNavigate();
+  const checkText = useLoginStore((state) => state.checkText);
+  const setCheckText = useLoginStore((state) => state.setCheckText);
   const [grammarErrors, setGrammarErrors] = useState([]);
   const [resReceived, setResReceived] = useState(false);
-
   const [story, setStory] = useState("");
   const [count, setCount] = useState(0);
+
   const handleChange = (e) => {
     setStory(e.target.value);
     setCount(e.target.value.length);
@@ -67,13 +69,24 @@ function Grammar() {
           <div className="checker-header">
             <p className="character-counter">{count} / 10,000 Characters</p>
           </div>
-          <textarea
-            className="grammar-box"
-            value={story}
-            maxLength="10000"
-            onChange={handleChange}
-            placeholder="Import an existing story, or copy and paste one here and then click the button to check your grammar!  (Max Limit: 10,000 Characters)"
-          />
+          {checkText ? (
+            <textarea
+              className="grammar-box"
+              value={story}
+              defaultValue={checkText}
+              maxLength="10000"
+              onChange={handleChange}
+            />
+          ) : (
+            <textarea
+              className="grammar-box"
+              value={story}
+              maxLength="10000"
+              onChange={handleChange}
+              placeholder="Import an existing story, or copy and paste one here and then click the button to check your grammar!  (Max Limit: 10,000 Characters)"
+            />
+          )}
+
           <button onClick={handleSubmit} className="grammar-submit-btn">
             Submit
           </button>

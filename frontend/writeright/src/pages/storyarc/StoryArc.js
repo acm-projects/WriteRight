@@ -55,6 +55,7 @@ function StoryArc() {
   };
 
   const handleSubmit = (e) => {
+    console.log(storyData);
     e.preventDefault();
 
     const postUrl = "http://localhost:8080/storyarcs";

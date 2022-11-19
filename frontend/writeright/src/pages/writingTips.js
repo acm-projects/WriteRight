@@ -2,6 +2,7 @@
 import "../everything.css";
 import logo from "../images/writerightTitle.png";
 import idk from "../images/idk.png";
+import Nav from "../components/nav/Nav";
 import { useState } from "react";
 import axios from "axios";
 
@@ -9,24 +10,7 @@ function WritingTips() {
   return (
     <body>
       <div className="bgBlue">
-        <nav className="main">
-          <img src={logo} className="logoBS" alt="Logo" />
-          <ul class="a">
-            <li class="a" id="myprojects">
-              <a href="">My Projects</a>
-            </li>
-            <li class="a" id="sheets">
-              <a href="">Sheets</a>
-            </li>
-            <li class="a" id="grammarchecker">
-              <a href="">Grammar Checker</a>
-            </li>
-            <li class="a" id="writingtips">
-              <a href="">Writing Tips</a>
-            </li>
-          </ul>
-          <button className="submit-btnNB">log out</button>
-        </nav>
+        <Nav />
         <div class="parentWT">
           <br></br>
           <br></br>

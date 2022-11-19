@@ -2,15 +2,22 @@
 import "../everything.css";
 import logo from "../images/writerightTitle.png";
 import { useState } from "react";
+import Nav from "../components/nav/Nav";
 import axios from "axios";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useLoginStore } from "../stores/LoginStore";
 
 function BlankSheet() {
+  const navigate = useNavigate();
   //Hook to store form data and submit it as a single object
   const [blankSheet, setBlankSheet] = useState({
     content: "",
     title: "",
     sheetType: 0,
   });
+
+  const checkText = useLoginStore((state) => state.checkText);
+  const setCheckText = useLoginStore((state) => state.setCheckText);
 
   let { content, title, sheetType } = blankSheet;
 
@@ -20,6 +27,13 @@ function BlankSheet() {
       ...prevState,
       [e.target.id]: e.target.value,
     }));
+  };
+
+  const handleGrammarCheck = (e) => {
+    e.preventDefault();
+    setCheckText(blankSheet.content);
+    console.log("The global text is:" + checkText);
+    navigate("/grammar");
   };
 
   //Function to send data from input fields to database
@@ -44,24 +58,7 @@ function BlankSheet() {
   return (
     <body>
       <div className="bgRedGray">
-        <nav className="main">
-          <img src={logo} className="logoBS" alt="Logo" />
-          <ul class="a">
-            <li class="a" id="myprojects">
-              <a href="">My Projects</a>
-            </li>
-            <li class="a" id="sheets">
-              <a href="">Sheets</a>
-            </li>
-            <li class="a" id="grammarchecker">
-              <a href="">Grammar Checker</a>
-            </li>
-            <li class="a" id="writingtips">
-              <a href="">Writing Tips</a>
-            </li>
-          </ul>
-          <button className="submit-btnNB">log out</button>
-        </nav>
+        <Nav />
         <nav className="sub">
           <ul class="a">
             <li class="a">
@@ -94,8 +91,11 @@ function BlankSheet() {
             </li>
           </ul>
           <nav className="rightBtn">
+            <button onClick={handleGrammarCheck} className="redButton">
+              Check Grammar
+            </button>
             <button type="submit" className="redButton" onClick={handleSubmit}>
-              Save To
+              Save
             </button>
           </nav>
         </nav>

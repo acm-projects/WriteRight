@@ -59,7 +59,6 @@ function LoginForm() {
           "Error logging in, please check console for a detailed error report"
         );
       });
-
     //After post request clear form data, set up redirect to new page after user signs up
   };
 

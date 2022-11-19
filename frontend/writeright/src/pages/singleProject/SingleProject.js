@@ -21,6 +21,10 @@ function SingleProject({ key, name }) {
     setShowForm((current) => !current);
   };
 
+  const newSheetNav = (e) => {
+    navigate(`/sheets/blank-sheet`);
+  };
+
   console.log(`The parent project is ${parentProject}`);
 
   return (
@@ -47,7 +51,7 @@ function SingleProject({ key, name }) {
 
       <div className="my-sheets">
         <div className="new-sheet-btns">
-          <div className="new-sheet-btn">
+          <div className="new-sheet-btn" onClick={newSheetNav}>
             + New<br></br> Blank <br></br>Sheet
           </div>
           <div className="new-sheet-btn">
