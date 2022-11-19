@@ -9,7 +9,12 @@ import { useLoginStore } from "../../stores/LoginStore";
 function Nav() {
   const getLogin = useLoginStore((state) => state.login);
   const signOut = useLoginStore((state) => state.signOut);
+  const parentProject = useLoginStore((state) => state.parentProject);
   const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/projects/${parentProject}`);
+  };
 
   const handleLogout = () => {
     if (getLogin == false) {
@@ -19,7 +24,6 @@ function Nav() {
       navigate("/");
     } else {
       signOut();
-      alert("You have successfully logged out!");
       navigate("/");
     }
   };
@@ -32,7 +36,9 @@ function Nav() {
           <Link to="/projects">My Projects</Link>
         </li>
         <li class="a" id="sheets">
-          <a href="">Sheets</a>
+          <a href="" onClick={handleClick}>
+            Sheets
+          </a>
         </li>
         <li class="a" id="grammarchecker">
           <Link to="/grammar">Grammar Checker</Link>
