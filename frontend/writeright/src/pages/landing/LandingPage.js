@@ -1,5 +1,6 @@
 import React from "react";
 import "./LandingPage.css";
+import landingmain from "../../images/landingmain.png";
 import { useNavigate } from "react-router-dom";
 import LandingNav from "../../components/landingnav/LandingNav";
 
