@@ -56,7 +56,7 @@ function MyProjects() {
         {showForm && <ProjectForm setShowForm={setShowForm} />}
         {userProjs.map((project) => (
           <div className="project-btn" key={project._id}>
-            <ProjectButton key={project._id} name={project.title} />
+            <ProjectButton mongoId={project._id} name={project.title} />
           </div>
         ))}
       </div>

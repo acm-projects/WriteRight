@@ -7,7 +7,7 @@ import { useLoginStore } from "../../stores/LoginStore";
 import axios from "axios";
 import Nav from "../../components/nav/Nav";
 
-function SingleProject({ key, name }) {
+function SingleProject({ mongoId, name }) {
   const navigate = useNavigate();
   let { id } = useParams();
   const [showForm, setShowForm] = useState(false);
@@ -15,6 +15,8 @@ function SingleProject({ key, name }) {
   const [projSheets, setProjSheets] = useState();
   const parentProject = useLoginStore((state) => state.parentProject);
   const setParentProject = useLoginStore((state) => state.setParentProject);
+  const projId = useLoginStore((state) => state.projId);
+  const setProjId = useLoginStore((state) => state.setProjId);
   setParentProject(id);
 
   const handleClick = (e) => {
@@ -24,8 +26,6 @@ function SingleProject({ key, name }) {
   const newSheetNav = (e) => {
     navigate(`/sheets/blank-sheet`);
   };
-
-  console.log(`The parent project is ${parentProject}`);
 
   return (
     <div className="bgRainbowWhite">

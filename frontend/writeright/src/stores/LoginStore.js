@@ -10,4 +10,6 @@ export const useLoginStore = create((set) => ({
   setParentProject: (parentProject) => set({ parentProject }),
   checkText: "",
   setCheckText: (checkText) => set({ checkText }),
+  projId: 0,
+  setProjId: (projId) => set({ projId }),
 }));

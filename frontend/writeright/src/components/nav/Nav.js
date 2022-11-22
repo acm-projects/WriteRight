@@ -36,9 +36,7 @@ function Nav() {
           <Link to="/projects">My Projects</Link>
         </li>
         <li class="a" id="sheets">
-          <a href="" onClick={handleClick}>
-            Sheets
-          </a>
+          <Link to={`/projects/${parentProject}`}>Sheets</Link>
         </li>
         <li class="a" id="grammarchecker">
           <Link to="/grammar">Grammar Checker</Link>
