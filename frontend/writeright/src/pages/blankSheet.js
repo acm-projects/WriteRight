@@ -20,7 +20,7 @@ function BlankSheet() {
   const setCheckText = useLoginStore((state) => state.setCheckText);
   const parentProject = useLoginStore((state) => state.parentProject);
   const projId = useLoginStore((state) => state.projId);
-  const [sheetId, setSheetId] = useState();
+  const [sheetId, setSheetId] = useState(0);
 
   let { content, title, sheetType } = blankSheet;
 
@@ -40,6 +40,8 @@ function BlankSheet() {
   };
 
   //Function to send data from input fields to database
+  //Function to send data from input fields to database
+  //Function to send data from input fields to database
   const handleSubmit = async (e) => {
     //Prevents blank form from being submitted, which would be bad for the DB
     e.preventDefault();
@@ -48,50 +50,33 @@ function BlankSheet() {
     const patchUrl = `http://localhost:8080/projects/update/${projId}`;
 
     const postReq = async () => {
-      const resId = await axios
-        .post(postUrl, blankSheet)
-        .then(function (response) {
-          setSheetId(response.data._id);
-          alert("Successfully added Blank Sheet to database!");
-          /*axios
-          .patch(patchUrl, sheetId)
-          .then(function (response) {
-            console.log(`The sheet id is ${sheetId}`);
-            alert("Successfully added the sheet to the project's contents!");
-            console.log(response);
-            navigate(`/projects/${parentProject}`);
-          })
-          .catch(function (error) {
-            alert("Error, couldnt add the sheet to the project!");
-            console.log(error);
-          });*/
-          return response.data._id;
-        })
-        .catch(function (error) {
-          alert("Error, check console for information!");
-          console.log(error);
-        });
-
-      setSheetId(resId);
+      try {
+        const response = await axios.post(postUrl, blankSheet);
+        console.log(`The res id is ${response.data._id}`);
+        setSheetId(response.data._id);
+        await patchReq(response.data._id);
+        return response.data._id;
+      } catch (error) {
+        alert("Error, check console for information!");
+        console.log(error);
+      }
     };
 
-    const patchReq = () => {
-      axios
-        .patch(patchUrl, sheetId)
-        .then(function (response) {
-          console.log(`The sheet id is ${sheetId}`);
-          alert("Successfully added the sheet to the project's contents!");
-          console.log(response);
-          navigate(`/projects/${parentProject}`);
-        })
-        .catch(function (error) {
-          alert("Error, couldnt add the sheet to the project!");
-          console.log(error);
-        });
+    const patchReq = async (sheetId) => {
+      try {
+        console.log(`The sheet id is ${sheetId}`);
+        const response = await axios.patch(patchUrl, sheetId);
+        alert("Successfully added the sheet to the project's contents!");
+        console.log(response);
+        navigate(`/projects/${parentProject}`);
+      } catch (error) {
+        alert("Error, couldnt add the sheet to the project!");
+        console.log(error);
+      }
     };
 
     await postReq();
-    await patchReq();
+    // await patchReq();
   };
 
   return (
