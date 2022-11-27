@@ -5,9 +5,15 @@ import axios from "axios";
 import "./SignUp2.css";
 import rainbow from "../../images/rainbowWhiteBG.png";
 import { Link } from "react-router-dom";
+import { useLoginStore } from "../../stores/LoginStore";
 import { useNavigate } from "react-router-dom";
 
 function SignUp2() {
+  const login = useLoginStore((state) => state.login);
+  const signIn = useLoginStore((state) => state.signIn);
+  const globalUsername = useLoginStore((state) => state.globalUsername);
+  const setGlobalUserName = useLoginStore((state) => state.setGlobalUserName);
+
   const navigate = useNavigate();
   const handleLogin = () => {
     navigate("/login");
@@ -33,7 +39,7 @@ function SignUp2() {
   };
 
   //Function to send data from input fields to database
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     //Prevents blank form from being submitted, which would be bad for the DB
     e.preventDefault();
 
@@ -48,7 +54,7 @@ function SignUp2() {
     };
 
     //After post request clear form data, set up redirect to new page after user signs up
-    axios
+    /* axios
       .post(postUrl, userData)
       .then(function (response) {
         console.log(response);
@@ -58,7 +64,7 @@ function SignUp2() {
       .catch(function (error) {
         console.log(error);
         alert("Error, please check console and try again later");
-      });
+      });*/
 
     /* setFormData({
         fName: "",
@@ -67,6 +73,37 @@ function SignUp2() {
         username: "",
         password: "",
       });*/
+    const registerReq = async () => {
+      try {
+        const res = await axios.post(postUrl, userData);
+        console.log(res);
+        await loginReq();
+      } catch (error) {
+        alert("Error, check console for information!");
+        console.log(error);
+      }
+    };
+
+    const loginReq = () => {
+      const loginUrl = "http://localhost:8080/users/login";
+      const loginData = {
+        username: userData.username,
+        password: userData.password,
+      };
+
+      try {
+        axios.post(loginUrl, loginData);
+        signIn();
+        setGlobalUserName(loginData.username);
+        console.log(`The username is ${globalUsername}`);
+        navigate("/projects");
+      } catch (error) {
+        console.log(error);
+        alert("Error logging in, check console and terminal!");
+      }
+    };
+
+    await registerReq();
   };
 
   return (
