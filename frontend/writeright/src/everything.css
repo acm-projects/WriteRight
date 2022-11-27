@@ -439,7 +439,6 @@ td {
 /*WRITING TIPS*/
 .parentWT {
   padding: 2%;
-  text-align: left;
   width: 70%;
   margin: auto;
 }
@@ -447,28 +446,27 @@ td {
   display: block;
   margin: auto;
   width: 100%;
-  height: auto;
-  border-radius: 15px;
-  overflow: hidden;
   padding-bottom: 5%;
 }
 .row1WT {
   padding-top: 5%;
-  display: inline;
+  display: block;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
+  text-align: center;
 }
 .row2WT {
   width: 100%;
-  padding-top: 5%;
-  display: inline;
+  padding-top: 3%;
+  padding-left: 2.8%;
+  display: block;
   justify-content: space-between;
   align-items: left;
+  text-align: left;
 }
 button.postWT {
   background-color: #c7cbd6;
   border-radius: 15px;
-  overflow: hidden;
   text-align: left;
   font-weight: bold;
   font-size: 23px;
@@ -476,10 +474,22 @@ button.postWT {
   width: 30%;
   margin: auto;
   padding: 2%;
+  line-height: 1;
+  cursor: pointer;
+}
+p.gradientWT {
+  margin-top: 3%;
+  background-image: linear-gradient(#161f37, #c7cbd6);
+  background-clip: text;
+  color: transparent;
+}
+b {
+  font-size: 14px;
 }
 span.articleWT {
   font-weight: 100;
   font-size: 14px;
+  line-height: 1;
 }
 
 /*BACKGROUNDS FOR EVERYTHING*/
