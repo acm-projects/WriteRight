@@ -10,6 +10,11 @@ import axios from "axios";
 
 function StoryArc() {
   const getLogin = useLoginStore((state) => state.login);
+  const parentProject = useLoginStore((state) => state.parentProject);
+  const projId = useLoginStore((state) => state.projId);
+  const [sheetId, setSheetId] = useState({
+    id: 0,
+  });
   const navigate = useNavigate();
 
   /*
@@ -47,6 +52,8 @@ function StoryArc() {
     resolution,
   } = storyData;
 
+  let { id } = sheetId;
+
   const handleChange = (e) => {
     setStoryData((prevState) => ({
       ...prevState,
@@ -54,21 +61,43 @@ function StoryArc() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     console.log(storyData);
     e.preventDefault();
 
     const postUrl = "http://localhost:8080/storyarcs";
-    axios
-      .post(postUrl, storyData)
-      .then(function (response) {
-        alert("Successfully added StoryArc to database");
-        console.log(response);
-      })
-      .catch(function (error) {
-        alert("Error, check console!");
+    const patchUrl = `http://localhost:8080/projects/update/${projId}`;
+
+    const postReq = async () => {
+      try {
+        const response = await axios.post(postUrl, storyData);
+        console.log(`The res id is ${response.data._id}`);
+        setSheetId({
+          id: response.data._id,
+        });
+        console.log(`The object is ${sheetId.id}`);
+        await patchReq(sheetId);
+        return response.data._id;
+      } catch (error) {
+        alert("Error, check console for information!");
         console.log(error);
-      });
+      }
+    };
+
+    const patchReq = async (sheetId) => {
+      try {
+        console.log(`The sheet id here is ${sheetId}`);
+        const response = await axios.patch(patchUrl, sheetId);
+        alert("Successfully added the sheet to the project's contents!");
+        console.log(response);
+        navigate(`/projects/${parentProject}`);
+      } catch (error) {
+        alert("Error, couldnt add the sheet to the project!");
+        console.log(error);
+      }
+    };
+
+    await postReq();
   };
 
   return (

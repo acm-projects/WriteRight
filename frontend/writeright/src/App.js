@@ -14,6 +14,7 @@ import MyProjects from "./pages/projects/MyProjects";
 import { useLoginStore } from "./stores/LoginStore";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SingleProject from "./pages/singleProject/SingleProject";
+import SingleSheet from "./pages/singleProject/SingleSheet";
 
 function App() {
   const getLogin = useLoginStore((state) => state.login);
@@ -42,6 +43,7 @@ function App() {
           <Route path="/sign-up" element={<SignUp2 />} />
           <Route path="/projects" element={<MyProjects />} />
           <Route path="/projects/:id" element={<SingleProject />} />
+          <Route path="/sheets/:id" element={<SingleSheet />} />
         </Routes>
       </Router>
     </div>

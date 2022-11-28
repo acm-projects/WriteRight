@@ -8,6 +8,8 @@ import "./ProjectForm.css";
 function ProjectForm({ setShowForm }) {
   const navigate = useNavigate();
   const globalUsername = useLoginStore((state) => state.globalUsername);
+  const projId = useLoginStore((state) => state.projId);
+  const setProjId = useLoginStore((state) => state.setProjId);
 
   const [projectData, setProjectData] = useState({
     title: "",
@@ -32,7 +34,9 @@ function ProjectForm({ setShowForm }) {
     axios
       .post(postUrl, projectData)
       .then(function (response) {
-        alert("Successfully created new project!");
+        console.log(`Response data: ${response.data._id}`);
+        setProjId(response.data._id);
+        console.log(`The proj id is ${projId}`);
         setShowForm(false);
         navigate(`/projects/${projectData.title}`);
       })
