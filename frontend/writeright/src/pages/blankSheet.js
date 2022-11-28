@@ -1,7 +1,7 @@
 //Import CSS sheet from same folder
 import "../everything.css";
 import logo from "../images/writerightTitle.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Nav from "../components/nav/Nav";
 import axios from "axios";
 import { Link, Navigate, useNavigate } from "react-router-dom";
@@ -15,12 +15,17 @@ function BlankSheet() {
     title: "",
     sheetType: 0,
   });
+  const [runEff, setRunEff] = useState(false);
 
   const checkText = useLoginStore((state) => state.checkText);
   const setCheckText = useLoginStore((state) => state.setCheckText);
   const parentProject = useLoginStore((state) => state.parentProject);
   const projId = useLoginStore((state) => state.projId);
-  const [sheetId, setSheetId] = useState(0);
+  const projContents = useLoginStore((state) => state.projContents);
+  const setProjContents = useLoginStore((state) => state.setProjContents);
+  const [sheetId, setSheetId] = useState({
+    id: "",
+  });
 
   let { content, title, sheetType } = blankSheet;
 
@@ -53,8 +58,12 @@ function BlankSheet() {
       try {
         const response = await axios.post(postUrl, blankSheet);
         console.log(`The res id is ${response.data._id}`);
-        setSheetId(response.data._id);
-        await patchReq(response.data._id);
+        setSheetId({
+          id: response.data._id,
+        });
+        setRunEff(true);
+        console.log(`1: The sheet id here is ${sheetId.id}`);
+        //  await patchReq(response.data._id);
         return response.data._id;
       } catch (error) {
         alert("Error, check console for information!");
@@ -62,9 +71,10 @@ function BlankSheet() {
       }
     };
 
-    const patchReq = async (sheetId) => {
+    /*const patchReq = async (resId) => {
       try {
-        console.log(`The sheet id is ${sheetId}`);
+        console.log(`2: The sheet id here is ${resId}`);
+        await setSheetId({ id: resId });
         const response = await axios.patch(patchUrl, sheetId);
         alert("Successfully added the sheet to the project's contents!");
         console.log(response);
@@ -73,10 +83,34 @@ function BlankSheet() {
         alert("Error, couldnt add the sheet to the project!");
         console.log(error);
       }
-    };
+    };*/
 
     await postReq();
-    // await patchReq();
+  };
+
+  const patchUrl = `http://localhost:8080/projects/update/${projId}`;
+
+  useEffect(() => {
+    if (sheetId.id && runEff) {
+      setRunEff(false);
+      patchReq(sheetId);
+      console.log(`The contents are ${projContents}`);
+    }
+  }, [sheetId.id]);
+
+  const patchReq = async (resId) => {
+    try {
+      console.log(`2: The sheet id here is ${resId}`);
+      await setSheetId({ id: resId });
+      const response = await axios.patch(patchUrl, sheetId);
+      alert("Successfully added the sheet to the project's contents!");
+      console.log(response);
+      setProjContents(response.data.contents);
+      navigate(`/projects/${parentProject}`);
+    } catch (error) {
+      alert("Error, couldnt add the sheet to the project!");
+      console.log(error);
+    }
   };
 
   return (

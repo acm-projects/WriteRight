@@ -12,4 +12,8 @@ export const useLoginStore = create((set) => ({
   setCheckText: (checkText) => set({ checkText }),
   projId: 0,
   setProjId: (projId) => set({ projId }),
+  sheetId: 0,
+  setSheetId: (sheetId) => set({ sheetId }),
+  projContents: [],
+  setProjContents: (projContents) => set({ projContents }),
 }));
